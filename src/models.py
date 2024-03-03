@@ -3,21 +3,25 @@ from torch.functional import F
 
 class LSTMClassification(nn.Module):
 
-    def __init__(self, input_dim, hidden_dim, target_size):
+    def __init__(self, config, target_size=1):
         super(LSTMClassification, self).__init__()
-        self.lstm = nn.LSTM(input_dim, hidden_dim, batch_first=True, num_layers=1)
+        self.lstm = nn.LSTM(input_size=config["input_dim"], 
+                            hidden_size=config["hidden_dim"],
+                            num_layers=config["num_layers"],
+                            batch_first=True)
         self.fc = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(500 * hidden_dim, hidden_dim),
+            nn.Linear(500 * config["hidden_dim"], config["hidden_dim"]),
             nn.Dropout(0.5),
             nn.ReLU(),
-            nn.Linear(hidden_dim, target_size)
+            nn.Linear(config["hidden_dim"], target_size)
             )
+        
     def forward(self, input_):
         lstm_out, (h, c) = self.lstm(input_)
         logits = self.fc(lstm_out)
         scores = F.sigmoid(logits)
-        return scores
+        return scores.double()
     
 class TransformerClassification(nn.Module):
 
