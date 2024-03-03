@@ -46,6 +46,7 @@ def str2torch(method: str):
         'adamw': AdamW,
         'sgd': SGD,
         'elu': F.elu,
+        'gelu': F.gelu,
         'relu': F.relu,
         'sigmoid': F.sigmoid
     }
