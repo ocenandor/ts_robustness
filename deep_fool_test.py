@@ -1,32 +1,14 @@
 import argparse
 import json
-import sys
-from functools import partial
 
-import matplotlib.pyplot as plt
 import numpy as np
 import torch
-import torch.nn as nn
-import torch.optim.lr_scheduler as lr_scheduler
 import tqdm
-from ignite.contrib.handlers import wandb_logger
-from ignite.engine import (Engine, Events, create_supervised_evaluator,
-                           create_supervised_trainer)
-from ignite.handlers import ModelCheckpoint
-from ignite.handlers.param_scheduler import LRScheduler
-from ignite.metrics import Accuracy, Loss
-from scipy.io.arff import loadarff
-from sklearn.model_selection import train_test_split
-from torch import nn
-from torch.functional import F
-from torch.utils.data import DataLoader, Dataset, SubsetRandomSampler
 
-import wandb
-
-from attacks.deepfool import deepfool
-from src.datasets import FordDataset, make_dataset
+from src.attacks.deepfool import deepfool
+from src.datasets import make_dataset
 from src.models import TransformerClassification
-from src.utils import build_optimizer, str2torch
+from src.utils import str2torch
 
 
 def test(config, weights):
