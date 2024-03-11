@@ -1,4 +1,4 @@
-# Robustness of time-series models to adversarial attacks :crossed_swords:
+# Robustness of time-series models to adversarial attacks
 ## Usage :memo:
 
 |||
