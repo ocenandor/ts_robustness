@@ -11,7 +11,6 @@ from torch import nn
 
 import wandb
 
-sys.path.append('../')
 from src.datasets import make_dataset
 from src.models import TransformerClassification
 from src.utils import build_optimizer, str2torch
