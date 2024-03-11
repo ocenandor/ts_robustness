@@ -1,5 +1,14 @@
 # Robustness of time-series models to adversarial attacks
-## Usage :memo:
+## Abstract :memo:
+
+Adversarial attacks are specialized techniques used to modify original data, aiming to degrade the accuracy of model predictions. 
+While prevalent in computer vision, these attacks are also relevant in the time-series domain. 
+Models exhibit varying susceptibility levels to such attacks. 
+
+In our project we assess the robustness of time-series models against 3 adversarial strategies (DeepFool, SimBA, BIM). 
+Specifically, the project entails implementing and training 3 simple custom architectures (transformer, CNN, LSTM) for time series classification tasks, subjecting them to various attacks, and evaluating the impact on performance metrics. 
+
+## Usage :rocket:
 
 |||
 | -------------| ------------- |
