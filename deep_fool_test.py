@@ -34,19 +34,16 @@ def test(config, weights):
     config['train']['optimizer'] = str2torch(config['train']['optimizer'])
 
     _, test_dataset, _, _ = make_dataset(config, args.data, return_loader=False)
-    model = TransformerClassification(config).to(device)
+    model = TransformerClassification(config).to(device) #TODO from config
     weights = torch.load(weights, map_location='cpu')
     model.load_state_dict(weights)
 
     iters = []
     for i in tqdm.tqdm(range(len(test_dataset))):
-        test_sample = torch.from_numpy(test_dataset[i][0]).unsqueeze(1)
-        r_tot, loop_i, label, k_i, pert_image = deepfool(test_sample, model, 2, max_iter=30)
+        test_sample = torch.from_numpy(test_dataset[i][0]).unsqueeze(1).to(device)
+        r_tot, loop_i, label, k_i, pert_image = deepfool(test_sample, model, 2, max_iter=30, device=device)
         iters.append(loop_i)
-
-    unique, counts = np.unique(iters, return_counts=True)
-
-    print(np.mean(iters), np.std(iters))
+    return iters
 
 if __name__ == '__main__':
 
@@ -60,4 +57,8 @@ if __name__ == '__main__':
     with open(args.config) as f:
         config =  json.load(f)
 
-    test(config, args.weights)
+    iters = test(config, args.weights)
+    unique, counts = np.unique(iters, return_counts=True)
+    print('distribution of number of iterations till inversion of label')
+    print(unique)
+    print(counts)

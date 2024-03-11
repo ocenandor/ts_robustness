@@ -62,11 +62,11 @@ def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None):
     for name, metric in metrics.items():
         metric.attach(train_evaluator, name)
         metric.attach(test_evaluator, name)
-
-    if wandb_log:
-        save_dir = wandb.run.dir + '/../saved_models'
-    elif save_dir is None:
-        save_dir = './saved_models'
+    if save_dir is None:
+        if wandb_log:
+            save_dir = wandb.run.dir + '/../saved_models'
+        else:
+            save_dir = './saved_models'
     print(f'model will be saved in {save_dir}')
     checkpoint_handler = ModelCheckpoint(dirname=save_dir, filename_prefix='best', #TODO add model_name
                                         n_saved=1, require_empty=False,
