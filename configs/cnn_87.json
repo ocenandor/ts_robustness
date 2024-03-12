@@ -16,7 +16,7 @@ config = {
     "n_epoch": 30,
     "optimizer": "adam",
     "scheduler_config": {
-      "type": None
+      "type": null
     }
   },
   "random_state": 42
