@@ -5,6 +5,7 @@
     "seq_length": 150
   },
   "model": {
+    "name": "cnn",
     "backbone": {
       "input_dim": 1,
       "hidden_dim": 100
