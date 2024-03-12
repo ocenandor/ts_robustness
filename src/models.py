@@ -39,7 +39,7 @@ class CNNClassification(nn.Module):
             nn.ReLU(),
             nn.MaxPool1d(kernel_size=2, stride=2),
 
-            nn.Conv1d(hidden_dimconfig["cnn"]["hidden_dim"], 
+            nn.Conv1d(hidden_dim=config["cnn"]["hidden_dim"], 
                       hidden_dim=config["cnn"]["hidden_dim"], 
                       kernel_size=3, 
                       stride=1, 
