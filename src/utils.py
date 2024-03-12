@@ -2,7 +2,6 @@ import numpy as np
 import torch
 import torch.optim.lr_scheduler as lr_scheduler
 from torch.optim.lr_scheduler import LambdaLR
-from warmup_scheduler import GradualWarmupScheduler
 from torch.optim import Adam, AdamW, SGD
 from torch.functional import F
 
