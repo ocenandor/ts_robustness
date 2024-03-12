@@ -9,6 +9,13 @@ In our project we assess the robustness of time-series models against 3 adversar
 Specifically, the project entails implementing and training 3 simple custom architectures (transformer, CNN, LSTM) for time series classification tasks, subjecting them to various attacks, and evaluating the impact on performance metrics. 
 
 ## Usage :rocket:
+To create virtual enviroment run
+
+```bash
+conda env create --file env.yml -n ts_robustness
+```
+
+### Files description
 
 |||
 | -------------| ------------- |
