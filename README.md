@@ -28,13 +28,13 @@ conda env create --file env.yml -n ts_robustness
 ### Test Quality
 | Model / Dataset | FordA (acc, %)|
 | :-------------:| :-------------: |
-| CNN   | :x:  | 
-| LSTM  | :x:  |
-| Transformer  | 89 | 
+| CNN   | **89**  | 
+| LSTM  | **78**  |
+| Transformer  | **88** | 
 
 ### Implementation
 | Model / Attack | DeepFool | SimBA | IFGSM |
 | :-------------:| :-------------: | :-------------: | :-------------: |
-| CNN   | :x:  | :x: | :x: |
-| LSTM  | :x:  | :x: | :x: |
+| CNN   | :heavy_check_mark:  | :x: | :x: |
+| LSTM  | :heavy_check_mark:  | :x: | :x: |
 | Transformer  | :heavy_check_mark:  | :x: | :x: |
