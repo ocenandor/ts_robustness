@@ -4,26 +4,32 @@ import numpy as np
 
 class LSTMClassification(nn.Module):
 
-    def __init__(self, config, target_size=1):
+    def __init__(self, config):
         super(LSTMClassification, self).__init__()
-        self.lstm = nn.LSTM(input_size=config["lstm"]["input_dim"], 
-                            hidden_size=config["lstm"]["hidden_dim"],
-                            num_layers=config["lstm"]["num_layers"],
+        config_m = config['model']
+        self.lstm = nn.LSTM(input_size=config_m["lstm"]["input_dim"], 
+                            hidden_size=config_m["lstm"]["hidden_dim"],
+                            num_layers=config_m["lstm"]["num_layers"],
                             batch_first=True)
         self.fc = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(config["lstm"]["hidden_dim"], config["fc"]["fc_dim"]),
-            nn.Dropout(config["fc"]["dropout"]),
+            nn.Linear(config_m["lstm"]["hidden_dim"], config_m["fc"]["fc_dim"]),
+            nn.Dropout(config_m["fc"]["dropout"]),
             nn.ReLU(),
-            nn.Linear(config["fc"]["fc_dim"], target_size)
+            nn.Linear(config_m["fc"]["fc_dim"], 2)
             )
         
     def forward(self, input_):
+        if len(input_.shape) == 3:
+            input_ = input_.squeeze(2)
         lstm_out, (h, c) = self.lstm(input_)
         logits = self.fc(lstm_out)
         scores = F.sigmoid(logits)
         return scores
-
+    
+    def eval(self):
+        self.lstm.train()
+        self.fc.eval()
 
 class CNNClassification(nn.Module):
 
