@@ -42,7 +42,7 @@ class TransformerClassification(nn.Module):
             nn.Linear(config_d['seq_length'] * n_features, self.fc_dim),
             nn.Dropout(config_m['fc']['dropout']),
             nn.ReLU(),
-            nn.Linear(self.fc_dim, 2)
+            nn.Linear(self.fc_dim, 1)
             )
         
     def forward(self, input_):
@@ -52,5 +52,5 @@ class TransformerClassification(nn.Module):
         embedding_out = self.embedding_layer(input_).permute(0, 2, 1)
         encoder_out = self.transformer_encoder(embedding_out)
         logits = self.fc(encoder_out)
-        # scores = F.sigmoid(logits)
-        return logits
+        scores = F.sigmoid(logits)
+        return scores
