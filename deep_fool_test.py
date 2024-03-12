@@ -8,8 +8,13 @@ import tqdm
 
 from src.attacks.deepfool import deepfool
 from src.datasets import make_dataset
-from src.models import TransformerClassification
+from src.models import TransformerClassification, CNNClassification
 from src.utils import str2torch
+
+MODELS = {
+    'cnn': CNNClassification,
+    'transformer': TransformerClassification
+    }
 
 
 def test(config, weights, overshoot=0.02):
@@ -17,7 +22,8 @@ def test(config, weights, overshoot=0.02):
     config['train']['optimizer'] = str2torch(config['train']['optimizer'])
 
     _, test_dataset, _, _ = make_dataset(config, args.data, return_loader=False)
-    model = TransformerClassification(config).to(device) #TODO from config
+    model = MODELS[config['model']['name']] # TODO move all such dicts to one place
+    model = model(config).to(device)
     weights = torch.load(weights, map_location='cpu')
     model.load_state_dict(weights)
 
