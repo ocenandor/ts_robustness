@@ -1,0 +1,46 @@
+2024-03-12 21:14:37,622 INFO    MainThread:1776 [wandb_setup.py:_flush():76] Current SDK version is 0.16.3
+2024-03-12 21:14:37,623 INFO    MainThread:1776 [wandb_setup.py:_flush():76] Configure stats pid to 1776
+2024-03-12 21:14:37,623 INFO    MainThread:1776 [wandb_setup.py:_flush():76] Loading settings from C:\Users\User\.config\wandb\settings
+2024-03-12 21:14:37,623 INFO    MainThread:1776 [wandb_setup.py:_flush():76] Loading settings from D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\settings
+2024-03-12 21:14:37,623 INFO    MainThread:1776 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-03-12 21:14:37,623 INFO    MainThread:1776 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-03-12 21:14:37,624 INFO    MainThread:1776 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-03-12 21:14:37,624 INFO    MainThread:1776 [wandb_init.py:_log_setup():526] Logging user logs to D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240312_211437-qqtsxdyp\logs\debug.log
+2024-03-12 21:14:37,625 INFO    MainThread:1776 [wandb_init.py:_log_setup():527] Logging internal logs to D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240312_211437-qqtsxdyp\logs\debug-internal.log
+2024-03-12 21:14:37,625 INFO    MainThread:1776 [wandb_init.py:_jupyter_setup():472] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000026CA7686490>
+2024-03-12 21:14:37,625 INFO    MainThread:1776 [wandb_init.py:init():566] calling init triggers
+2024-03-12 21:14:37,625 INFO    MainThread:1776 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {'model': {'lstm': {'input_dim': 500, 'hidden_dim': 100, 'num_layers': 2}, 'fc': {'fc_dim': 50, 'dropout': 0}}, 'train': {'optimizer': 'adam', 'lr': 0.0003, 'n_epoch': 20}, 'data': {'seq_length': 500, 'step': 25}, 'random_state': 42}
+2024-03-12 21:14:37,625 INFO    MainThread:1776 [wandb_init.py:init():616] starting backend
+2024-03-12 21:14:37,625 INFO    MainThread:1776 [wandb_init.py:init():620] setting up manager
+2024-03-12 21:14:37,633 INFO    MainThread:1776 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-03-12 21:14:37,636 INFO    MainThread:1776 [wandb_init.py:init():628] backend started and connected
+2024-03-12 21:14:37,656 INFO    MainThread:1776 [wandb_run.py:_label_probe_notebook():1295] probe notebook
+2024-03-12 21:14:37,657 INFO    MainThread:1776 [wandb_run.py:_label_probe_notebook():1305] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-03-12 21:14:37,657 INFO    MainThread:1776 [wandb_init.py:init():720] updated telemetry
+2024-03-12 21:14:37,710 INFO    MainThread:1776 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-03-12 21:14:38,655 INFO    MainThread:1776 [wandb_run.py:_on_init():2262] communicating current version
+2024-03-12 21:14:39,444 INFO    MainThread:1776 [wandb_run.py:_on_init():2271] got version response upgrade_message: "wandb version 0.16.4 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-03-12 21:14:39,444 INFO    MainThread:1776 [wandb_init.py:init():804] starting run threads in backend
+2024-03-12 21:14:52,423 INFO    MainThread:1776 [wandb_run.py:_console_start():2241] atexit reg
+2024-03-12 21:14:52,423 INFO    MainThread:1776 [wandb_run.py:_redirect():2096] redirect: wrap_raw
+2024-03-12 21:14:52,423 INFO    MainThread:1776 [wandb_run.py:_redirect():2161] Wrapping output streams.
+2024-03-12 21:14:52,423 INFO    MainThread:1776 [wandb_run.py:_redirect():2186] Redirects installed.
+2024-03-12 21:14:52,425 INFO    MainThread:1776 [wandb_init.py:init():847] run started, returning control to user process
+2024-03-12 21:14:52,460 INFO    MainThread:1776 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-03-12 21:14:52,460 INFO    MainThread:1776 [wandb_init.py:_pause_backend():437] pausing backend
+2024-03-12 21:14:52,465 INFO    MainThread:1776 [wandb_init.py:_resume_backend():442] resuming backend
+2024-03-12 21:14:52,665 INFO    MainThread:1776 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-03-12 21:14:52,665 INFO    MainThread:1776 [wandb_init.py:_pause_backend():437] pausing backend
+2024-03-12 21:14:52,675 INFO    MainThread:1776 [wandb_init.py:_resume_backend():442] resuming backend
+2024-03-12 21:14:57,979 INFO    MainThread:1776 [wandb_run.py:_finish():1970] finishing run ts-robustness/ml-course/qqtsxdyp
+2024-03-12 21:14:57,979 INFO    MainThread:1776 [jupyter.py:save_history():445] not saving jupyter history
+2024-03-12 21:14:57,979 INFO    MainThread:1776 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-03-12 21:14:57,979 INFO    MainThread:1776 [wandb_init.py:_jupyter_teardown():454] cleaning up jupyter logic
+2024-03-12 21:14:57,979 INFO    MainThread:1776 [wandb_run.py:_atexit_cleanup():2210] got exitcode: 0
+2024-03-12 21:14:57,980 INFO    MainThread:1776 [wandb_run.py:_restore():2193] restore
+2024-03-12 21:14:57,980 INFO    MainThread:1776 [wandb_run.py:_restore():2199] restore done
+2024-03-12 21:15:04,278 INFO    MainThread:1776 [wandb_run.py:_footer_history_summary_info():3866] rendering history
+2024-03-12 21:15:04,279 INFO    MainThread:1776 [wandb_run.py:_footer_history_summary_info():3898] rendering summary
+2024-03-12 21:15:04,286 INFO    MainThread:1776 [wandb_run.py:_footer_sync_info():3825] logging synced files

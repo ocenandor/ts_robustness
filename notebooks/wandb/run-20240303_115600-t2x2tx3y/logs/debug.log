@@ -1,0 +1,64 @@
+2024-03-03 11:56:01,014 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Current SDK version is 0.16.3
+2024-03-03 11:56:01,014 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Configure stats pid to 3272
+2024-03-03 11:56:01,014 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Loading settings from C:\Users\User\.config\wandb\settings
+2024-03-03 11:56:01,014 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Loading settings from D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\settings
+2024-03-03 11:56:01,014 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-03-03 11:56:01,014 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-03-03 11:56:01,015 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-03-03 11:56:01,015 INFO    MainThread:3272 [wandb_init.py:_log_setup():526] Logging user logs to D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_115600-t2x2tx3y\logs\debug.log
+2024-03-03 11:56:01,015 INFO    MainThread:3272 [wandb_init.py:_log_setup():527] Logging internal logs to D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_115600-t2x2tx3y\logs\debug-internal.log
+2024-03-03 11:56:01,015 INFO    MainThread:3272 [wandb_init.py:_jupyter_setup():472] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000029450D48F10>
+2024-03-03 11:56:01,015 INFO    MainThread:3272 [wandb_init.py:init():566] calling init triggers
+2024-03-03 11:56:01,015 INFO    MainThread:3272 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {'model': {'encoder': {'d_model': 1, 'nhead': 0, 'layer_norm_eps': 0.001, 'dropout': 0.5}, 'input_dim': 500, 'hidden_dim': 100, 'num_layers': 2, 'fc': {'dim': 50, 'dropout': 0.5}}, 'train': {'optimizer': <class 'torch.optim.adam.Adam'>, 'lr': 0.0003, 'n_epoch': 2}, 'random_state': 693}
+2024-03-03 11:56:01,016 INFO    MainThread:3272 [wandb_init.py:init():616] starting backend
+2024-03-03 11:56:01,016 INFO    MainThread:3272 [wandb_init.py:init():620] setting up manager
+2024-03-03 11:56:01,023 INFO    MainThread:3272 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-03-03 11:56:01,032 INFO    MainThread:3272 [wandb_init.py:init():628] backend started and connected
+2024-03-03 11:56:01,052 INFO    MainThread:3272 [wandb_run.py:_label_probe_notebook():1295] probe notebook
+2024-03-03 11:56:01,053 INFO    MainThread:3272 [wandb_run.py:_label_probe_notebook():1305] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-03-03 11:56:01,053 INFO    MainThread:3272 [wandb_init.py:init():720] updated telemetry
+2024-03-03 11:56:01,188 INFO    MainThread:3272 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-03-03 11:56:02,196 INFO    MainThread:3272 [wandb_run.py:_on_init():2262] communicating current version
+2024-03-03 11:56:03,002 INFO    MainThread:3272 [wandb_run.py:_on_init():2271] got version response 
+2024-03-03 11:56:03,002 INFO    MainThread:3272 [wandb_init.py:init():804] starting run threads in backend
+2024-03-03 11:56:16,102 INFO    MainThread:3272 [wandb_run.py:_console_start():2241] atexit reg
+2024-03-03 11:56:16,102 INFO    MainThread:3272 [wandb_run.py:_redirect():2096] redirect: wrap_raw
+2024-03-03 11:56:16,103 INFO    MainThread:3272 [wandb_run.py:_redirect():2161] Wrapping output streams.
+2024-03-03 11:56:16,103 INFO    MainThread:3272 [wandb_run.py:_redirect():2186] Redirects installed.
+2024-03-03 11:56:16,104 INFO    MainThread:3272 [wandb_init.py:init():847] run started, returning control to user process
+2024-03-03 11:56:17,248 INFO    MainThread:3272 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-03-03 11:56:17,248 INFO    MainThread:3272 [wandb_init.py:_pause_backend():437] pausing backend
+2024-03-03 11:56:33,195 INFO    MainThread:3272 [wandb_init.py:_resume_backend():442] resuming backend
+2024-03-03 11:56:33,912 INFO    MainThread:3272 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-03-03 11:56:33,912 INFO    MainThread:3272 [wandb_init.py:_pause_backend():437] pausing backend
+2024-03-03 11:56:54,292 INFO    MainThread:3272 [wandb_init.py:_resume_backend():442] resuming backend
+2024-03-03 11:56:54,294 INFO    MainThread:3272 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-03-03 11:56:54,294 INFO    MainThread:3272 [wandb_init.py:_pause_backend():437] pausing backend
+2024-03-03 11:56:56,759 INFO    MainThread:3272 [wandb_init.py:_resume_backend():442] resuming backend
+2024-03-03 11:56:58,319 INFO    MainThread:3272 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-03-03 11:56:58,319 INFO    MainThread:3272 [wandb_init.py:_pause_backend():437] pausing backend
+2024-03-03 11:57:09,185 INFO    MainThread:3272 [wandb_init.py:_resume_backend():442] resuming backend
+2024-03-03 11:57:09,241 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Current SDK version is 0.16.3
+2024-03-03 11:57:09,241 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Configure stats pid to 3272
+2024-03-03 11:57:09,241 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Loading settings from C:\Users\User\.config\wandb\settings
+2024-03-03 11:57:09,241 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Loading settings from D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\settings
+2024-03-03 11:57:09,241 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-03-03 11:57:09,241 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-03-03 11:57:09,243 INFO    MainThread:3272 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-03-03 11:57:09,243 INFO    MainThread:3272 [wandb_init.py:_log_setup():526] Logging user logs to D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_115709-50o5t2hx\logs\debug.log
+2024-03-03 11:57:09,243 INFO    MainThread:3272 [wandb_init.py:_log_setup():527] Logging internal logs to D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_115709-50o5t2hx\logs\debug-internal.log
+2024-03-03 11:57:09,243 INFO    MainThread:3272 [wandb_init.py:init():566] calling init triggers
+2024-03-03 11:57:09,243 INFO    MainThread:3272 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {'model': {'encoder': {'d_model': 1, 'nhead': 0, 'layer_norm_eps': 0.001, 'dropout': 0.5}, 'input_dim': 100, 'hidden_dim': 100, 'num_layers': 2, 'fc': {'dim': 50, 'dropout': 0.5}}, 'train': {'optimizer': <class 'torch.optim.adam.Adam'>, 'lr': 0.0003, 'n_epoch': 2}, 'random_state': 396}
+2024-03-03 11:57:09,243 INFO    MainThread:3272 [wandb_init.py:init():591] re-initializing run, found existing run on stack: t2x2tx3y
+2024-03-03 11:57:09,245 INFO    MainThread:3272 [wandb_run.py:_finish():1970] finishing run ts-robustness/ml-course/t2x2tx3y
+2024-03-03 11:57:09,245 INFO    MainThread:3272 [jupyter.py:save_history():445] not saving jupyter history
+2024-03-03 11:57:09,245 INFO    MainThread:3272 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-03-03 11:57:09,245 INFO    MainThread:3272 [wandb_init.py:_jupyter_teardown():454] cleaning up jupyter logic
+2024-03-03 11:57:09,245 INFO    MainThread:3272 [wandb_run.py:_atexit_cleanup():2210] got exitcode: 0
+2024-03-03 11:57:09,246 INFO    MainThread:3272 [wandb_run.py:_restore():2193] restore
+2024-03-03 11:57:09,246 INFO    MainThread:3272 [wandb_run.py:_restore():2199] restore done
+2024-03-03 11:57:21,347 INFO    MainThread:3272 [wandb_run.py:_footer_history_summary_info():3866] rendering history
+2024-03-03 11:57:21,347 INFO    MainThread:3272 [wandb_run.py:_footer_history_summary_info():3898] rendering summary
+2024-03-03 11:57:21,354 INFO    MainThread:3272 [wandb_run.py:_footer_sync_info():3825] logging synced files

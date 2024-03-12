@@ -8,8 +8,14 @@ import tqdm
 
 from src.attacks.deepfool import deepfool
 from src.datasets import make_dataset
-from src.models import TransformerClassification
+from src.models import TransformerClassification, CNNClassification, LSTMClassification
 from src.utils import str2torch
+
+MODELS = {
+    'cnn': CNNClassification,
+    'transformer': TransformerClassification,
+    'lstm': LSTMClassification
+    }
 
 
 def test(config, weights, overshoot=0.02):
@@ -17,13 +23,14 @@ def test(config, weights, overshoot=0.02):
     config['train']['optimizer'] = str2torch(config['train']['optimizer'])
 
     _, test_dataset, _, _ = make_dataset(config, args.data, return_loader=False)
-    model = TransformerClassification(config).to(device) #TODO from config
+    model = MODELS[config['model']['name']] # TODO move all such dicts to one place
+    model = model(config).to(device)
     weights = torch.load(weights, map_location='cpu')
     model.load_state_dict(weights)
 
     iters = []
     for i in tqdm.tqdm(range(len(test_dataset))):
-        test_sample = torch.from_numpy(test_dataset[i][0]).unsqueeze(1).to(device)
+        test_sample = torch.from_numpy(test_dataset[i][0]).unsqueeze(1).to(device) # TODO unsqueeze for adding "feature" dimension, but should change for more interpretibility
         r_tot, loop_i, label, k_i, pert_image = deepfool(test_sample, model, 2, max_iter=30, device=device, overshoot=overshoot)
         iters.append(loop_i)
     return iters

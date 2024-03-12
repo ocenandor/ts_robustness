@@ -1,0 +1,82 @@
+2024-03-03 19:44:15,147 INFO    StreamThr :9316 [internal.py:wandb_internal():86] W&B internal server running at pid: 9316, started at: 2024-03-03 19:44:15.146621
+2024-03-03 19:44:15,151 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status
+2024-03-03 19:44:15,154 INFO    WriterThread:9316 [datastore.py:open_for_write():87] open: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\run-i1t681rj.wandb
+2024-03-03 19:44:15,159 DEBUG   SenderThread:9316 [sender.py:send():382] send: header
+2024-03-03 19:44:15,159 DEBUG   SenderThread:9316 [sender.py:send():382] send: run
+2024-03-03 19:44:16,079 INFO    SenderThread:9316 [dir_watcher.py:__init__():211] watching files in: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\files
+2024-03-03 19:44:16,080 INFO    SenderThread:9316 [sender.py:_start_run_threads():1136] run started: i1t681rj with start time 1709484254.83542
+2024-03-03 19:44:16,093 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: check_version
+2024-03-03 19:44:16,093 DEBUG   SenderThread:9316 [sender.py:send_request():409] send_request: check_version
+2024-03-03 19:44:17,217 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: run_start
+2024-03-03 19:44:17,232 DEBUG   HandlerThread:9316 [system_info.py:__init__():27] System info init
+2024-03-03 19:44:17,232 DEBUG   HandlerThread:9316 [system_info.py:__init__():42] System info init done
+2024-03-03 19:44:17,232 INFO    HandlerThread:9316 [system_monitor.py:start():194] Starting system monitor
+2024-03-03 19:44:17,232 INFO    SystemMonitor:9316 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-03-03 19:44:17,233 INFO    HandlerThread:9316 [system_monitor.py:probe():214] Collecting system info
+2024-03-03 19:44:17,236 INFO    SystemMonitor:9316 [interfaces.py:start():190] Started cpu monitoring
+2024-03-03 19:44:17,236 DEBUG   HandlerThread:9316 [system_info.py:probe():151] Probing system
+2024-03-03 19:44:17,237 INFO    SystemMonitor:9316 [interfaces.py:start():190] Started disk monitoring
+2024-03-03 19:44:17,238 INFO    SystemMonitor:9316 [interfaces.py:start():190] Started gpu monitoring
+2024-03-03 19:44:17,238 INFO    SystemMonitor:9316 [interfaces.py:start():190] Started memory monitoring
+2024-03-03 19:44:17,254 INFO    SystemMonitor:9316 [interfaces.py:start():190] Started network monitoring
+2024-03-03 19:44:17,255 DEBUG   HandlerThread:9316 [system_info.py:_probe_git():136] Probing git
+2024-03-03 19:44:17,356 DEBUG   HandlerThread:9316 [system_info.py:_probe_git():144] Probing git done
+2024-03-03 19:44:17,356 DEBUG   HandlerThread:9316 [system_info.py:probe():199] Probing system done
+2024-03-03 19:44:17,356 DEBUG   HandlerThread:9316 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.11.5', 'heartbeatAt': '2024-03-03T16:44:17.236021', 'startedAt': '2024-03-03T16:44:04.594320', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'Study/Skoltech/MachineLearning/ts_robustness/notebooks/lstm_train.ipynb', 'codePathLocal': None, 'root': 'D:/Study/Skoltech/MachineLearning/ts_robustness', 'git': {'remote': 'https://github.com/ocenandor/ts_robustness.git', 'commit': '4f8a9055a365678414ab43906f91b06730676c14'}, 'email': 'danvol121@gmail.com', 'host': 'WIN-GCNRF9K88AD', 'username': 'User', 'executable': 'C:\\Users\\User\\anaconda3\\python.exe', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 2592.0, 'min': 0.0, 'max': 2592.0}, 'cpu_freq_per_core': [{'current': 2592.0, 'min': 0.0, 'max': 2592.0}], 'disk': {'/': {'total': 931.5107383728027, 'used': 711.0020446777344}}, 'gpu': 'NVIDIA GeForce RTX 2060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2060', 'memory_total': 6442450944}], 'memory': {'total': 15.817119598388672}}
+2024-03-03 19:44:17,356 INFO    HandlerThread:9316 [system_monitor.py:probe():224] Finished collecting system info
+2024-03-03 19:44:17,356 INFO    HandlerThread:9316 [system_monitor.py:probe():227] Publishing system info
+2024-03-03 19:44:17,356 DEBUG   HandlerThread:9316 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-03-03 19:44:18,097 INFO    Thread-32 :9316 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\files\conda-environment.yaml
+2024-03-03 19:44:31,221 INFO    Thread-32 :9316 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\files\conda-environment.yaml
+2024-03-03 19:44:31,261 DEBUG   HandlerThread:9316 [system_info.py:_save_conda():220] Saving conda packages done
+2024-03-03 19:44:31,262 INFO    HandlerThread:9316 [system_monitor.py:probe():229] Finished publishing system info
+2024-03-03 19:44:31,262 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:44:31,262 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: keepalive
+2024-03-03 19:44:31,262 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:44:31,263 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: keepalive
+2024-03-03 19:44:31,263 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:44:31,263 DEBUG   SenderThread:9316 [sender.py:send():382] send: files
+2024-03-03 19:44:31,263 INFO    SenderThread:9316 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-03-03 19:44:31,290 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: python_packages
+2024-03-03 19:44:31,290 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-03 19:44:31,291 DEBUG   SenderThread:9316 [sender.py:send_request():409] send_request: python_packages
+2024-03-03 19:44:31,291 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-03 19:44:31,293 DEBUG   SenderThread:9316 [sender.py:send_request():409] send_request: stop_status
+2024-03-03 19:44:32,034 DEBUG   SenderThread:9316 [sender.py:send():382] send: telemetry
+2024-03-03 19:44:32,228 INFO    Thread-32 :9316 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\files\output.log
+2024-03-03 19:44:32,228 INFO    Thread-32 :9316 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\files\requirements.txt
+2024-03-03 19:44:32,229 INFO    Thread-32 :9316 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\files\wandb-metadata.json
+2024-03-03 19:44:33,000 INFO    wandb-upload_0:9316 [upload_job.py:push():131] Uploaded file C:\Users\User\AppData\Local\Temp\tmpdm0rfeuwwandb\pp9qkpgg-wandb-metadata.json
+2024-03-03 19:44:34,251 INFO    Thread-32 :9316 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\files\output.log
+2024-03-03 19:44:36,078 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:44:39,297 INFO    Thread-32 :9316 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\files\output.log
+2024-03-03 19:44:41,262 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:44:46,286 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-03 19:44:46,286 DEBUG   SenderThread:9316 [sender.py:send_request():409] send_request: stop_status
+2024-03-03 19:44:46,301 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-03 19:44:46,579 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:44:47,379 INFO    Thread-32 :9316 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\files\config.yaml
+2024-03-03 19:44:51,838 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:44:56,890 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:45:01,292 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-03 19:45:01,293 DEBUG   SenderThread:9316 [sender.py:send_request():409] send_request: stop_status
+2024-03-03 19:45:01,307 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-03 19:45:02,541 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:45:07,593 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:45:12,655 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:45:16,296 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-03 19:45:16,297 DEBUG   SenderThread:9316 [sender.py:send_request():409] send_request: stop_status
+2024-03-03 19:45:16,311 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-03 19:45:17,262 DEBUG   SystemMonitor:9316 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-03-03 19:45:17,264 DEBUG   SenderThread:9316 [sender.py:send():382] send: stats
+2024-03-03 19:45:18,277 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:45:21,754 INFO    Thread-32 :9316 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\files\output.log
+2024-03-03 19:45:22,765 INFO    Thread-32 :9316 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\wandb\run-20240303_194404-i1t681rj\files\output.log
+2024-03-03 19:45:23,464 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:45:28,530 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:45:31,308 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-03 19:45:31,309 DEBUG   SenderThread:9316 [sender.py:send_request():409] send_request: stop_status
+2024-03-03 19:45:31,322 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-03 19:45:33,594 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:45:38,655 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report
+2024-03-03 19:45:43,703 DEBUG   HandlerThread:9316 [handler.py:handle_request():146] handle_request: status_report

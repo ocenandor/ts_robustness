@@ -1,0 +1,63 @@
+wandb_version: 1
+
+model:
+  desc: null
+  value:
+    encoder:
+      d_model: 1
+      nhead: 0
+      layer_norm_eps: 0.001
+      dropout: 0.5
+    input_dim: 1
+    hidden_dim: 100
+    num_layers: 1
+    fc:
+      dim: 50
+      dropout: 0.5
+train:
+  desc: null
+  value:
+    optimizer: torch.optim.adam.Adam
+    lr: 0.0003
+    n_epoch: 2
+random_state:
+  desc: null
+  value: 662
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.5
+    cli_version: 0.16.3
+    framework: huggingface
+    huggingface_version: 4.37.2
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    start_time: 1709465729.326584
+    t:
+      1:
+      - 1
+      - 5
+      - 10
+      - 11
+      - 49
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 10
+      - 11
+      - 49
+      - 53
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.11.5
+      5: 0.16.3
+      6: 4.37.2
+      8:
+      - 1
+      - 3
+      - 5
+      13: windows-amd64

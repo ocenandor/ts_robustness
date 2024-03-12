@@ -1,8 +1,8 @@
-**wandb/
 **__pycache__/
 **test.ipynb
 **hyper_search.ipynb
-notebooks/.ipynb_checkpoints/*
+**/*.ipynb_checkpoints/ 
 **.pth
 **pkl
 **plot_results.ipynb
+notebooks/test_cnn.ipynb

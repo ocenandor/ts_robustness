@@ -1,0 +1,52 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.5",
+    "heartbeatAt": "2024-03-03T10:52:08.362213",
+    "startedAt": "2024-03-03T10:51:59.138142",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "Study/Skoltech/MachineLearning/ts_robustness/notebooks/lstm_train.ipynb",
+    "codePathLocal": null,
+    "root": "D:/Study/Skoltech/MachineLearning/ts_robustness",
+    "git": {
+        "remote": "https://github.com/ocenandor/ts_robustness.git",
+        "commit": "8170c43808bd6f354c69dfaa87c854e6a4f481fc"
+    },
+    "email": "danvol121@gmail.com",
+    "host": "WIN-GCNRF9K88AD",
+    "username": "User",
+    "executable": "C:\\Users\\User\\anaconda3\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2592.0,
+        "min": 0.0,
+        "max": 2592.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2592.0,
+            "min": 0.0,
+            "max": 2592.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 931.5107383728027,
+            "used": 710.9982986450195
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2060",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.817119598388672
+    }
+}

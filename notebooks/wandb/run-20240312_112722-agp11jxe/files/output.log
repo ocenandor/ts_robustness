@@ -1,0 +1,1421 @@
+device: cuda
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6939
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6920
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6951
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6917
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6901
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6917
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6862
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6970
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6971
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6914
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6938
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6965
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6998
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6919
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.7012
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6896
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6983
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6969
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6912
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6960
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6850
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6914
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.7037
+Training Results - Epoch: 1  Avg accuracy: 0.51 Avg loss: 0.6919
+Validation Results - Epoch: 1  Avg accuracy: 0.51 Avg loss: 0.6918
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6856
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.7003
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6963
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6938
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6930
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6895
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6869
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6914
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6963
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6891
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6864
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6884
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6918
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6896
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6899
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6899
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6875
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6877
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6894
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6853
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6989
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6898
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6876
+Training Results - Epoch: 2  Avg accuracy: 0.52 Avg loss: 0.6897
+Validation Results - Epoch: 2  Avg accuracy: 0.51 Avg loss: 0.6898
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6839
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6931
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6923
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6876
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6891
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6869
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6895
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6859
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6931
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6791
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6897
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6882
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6888
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6872
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6849
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6826
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6900
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6875
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6864
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6858
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6824
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6860
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6921
+Training Results - Epoch: 3  Avg accuracy: 0.59 Avg loss: 0.6834
+Validation Results - Epoch: 3  Avg accuracy: 0.55 Avg loss: 0.6841
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6776
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6861
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6762
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6793
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6799
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6839
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6756
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6823
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6823
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6828
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6781
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6764
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6724
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6792
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6819
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6795
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6705
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6743
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6734
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6759
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6690
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6638
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6675
+Training Results - Epoch: 4  Avg accuracy: 0.65 Avg loss: 0.6687
+Validation Results - Epoch: 4  Avg accuracy: 0.64 Avg loss: 0.6705
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6595
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6608
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6709
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6591
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6620
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6717
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6636
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6559
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6639
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6452
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6581
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6553
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6540
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6608
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6654
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6565
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6638
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6466
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6639
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6457
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6548
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6433
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6389
+Training Results - Epoch: 5  Avg accuracy: 0.69 Avg loss: 0.6340
+Validation Results - Epoch: 5  Avg accuracy: 0.67 Avg loss: 0.6414
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5924
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6497
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6384
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6216
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6465
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6104
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6277
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5845
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6110
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6019
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6100
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5923
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5955
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5711
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5945
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6177
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5769
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.6056
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5958
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5688
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5798
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5410
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5957
+Training Results - Epoch: 6  Avg accuracy: 0.78 Avg loss: 0.5313
+Validation Results - Epoch: 6  Avg accuracy: 0.71 Avg loss: 0.5737
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5491
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5929
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5507
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5430
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5529
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5186
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5092
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5147
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5197
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5384
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5144
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4910
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4900
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5506
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4965
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4969
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4851
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5197
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4877
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4670
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4407
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4533
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4867
+Training Results - Epoch: 7  Avg accuracy: 0.82 Avg loss: 0.4432
+Validation Results - Epoch: 7  Avg accuracy: 0.74 Avg loss: 0.5259
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4536
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4736
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4522
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4706
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4693
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5118
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4549
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4553
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5003
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4778
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4088
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4100
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3914
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4314
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4042
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.5158
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4684
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3992
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4515
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4012
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4402
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3662
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4192
+Training Results - Epoch: 8  Avg accuracy: 0.85 Avg loss: 0.3792
+Validation Results - Epoch: 8  Avg accuracy: 0.75 Avg loss: 0.5146
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4005
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4144
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3825
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3492
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3746
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3773
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3692
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4158
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4044
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3776
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3899
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4623
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.4387
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3409
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3728
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3007
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3484
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3643
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3678
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3418
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3482
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3821
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3385
+Training Results - Epoch: 9  Avg accuracy: 0.90 Avg loss: 0.2990
+Validation Results - Epoch: 9  Avg accuracy: 0.75 Avg loss: 0.4916
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3620
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2902
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3386
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3670
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3612
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3250
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2753
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2865
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3336
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3468
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3274
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2651
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3011
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2830
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2705
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2445
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3172
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2890
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2083
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2650
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3590
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2864
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2523
+Training Results - Epoch: 10  Avg accuracy: 0.92 Avg loss: 0.2446
+Validation Results - Epoch: 10  Avg accuracy: 0.76 Avg loss: 0.4886
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2774
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2552
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2299
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2364
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2203
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2213
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2869
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2014
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2633
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2795
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2111
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2397
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2552
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2949
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2672
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2280
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2170
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2044
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2265
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2532
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1928
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3083
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2580
+Training Results - Epoch: 11  Avg accuracy: 0.94 Avg loss: 0.1926
+Validation Results - Epoch: 11  Avg accuracy: 0.78 Avg loss: 0.4773
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1940
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2592
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1867
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2121
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1880
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2345
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1995
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1643
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1426
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2551
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1806
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2007
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1880
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1912
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1893
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1957
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2279
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.3056
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1920
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1908
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1942
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2478
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1851
+Training Results - Epoch: 12  Avg accuracy: 0.96 Avg loss: 0.1541
+Validation Results - Epoch: 12  Avg accuracy: 0.77 Avg loss: 0.5200
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1150
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1947
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1643
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1462
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1627
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2107
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1699
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1508
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1156
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1441
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1689
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1600
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1460
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1771
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1612
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1914
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1651
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1795
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1322
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1154
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1990
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1483
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2084
+Training Results - Epoch: 13  Avg accuracy: 0.97 Avg loss: 0.1177
+Validation Results - Epoch: 13  Avg accuracy: 0.77 Avg loss: 0.5472
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1221
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1607
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1593
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1069
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1160
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1362
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1559
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1060
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1169
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1356
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1248
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1547
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1563
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1608
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1019
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1485
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1380
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.2066
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1157
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1092
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1338
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0917
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1297
+Training Results - Epoch: 14  Avg accuracy: 0.98 Avg loss: 0.0904
+Validation Results - Epoch: 14  Avg accuracy: 0.78 Avg loss: 0.5582
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0870
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1244
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0910
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1086
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0878
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0778
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0920
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1006
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1008
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1281
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0649
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1061
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1788
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1249
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1289
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0986
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1268
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0907
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0789
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1053
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1166
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0982
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0975
+Training Results - Epoch: 15  Avg accuracy: 0.99 Avg loss: 0.0687
+Validation Results - Epoch: 15  Avg accuracy: 0.77 Avg loss: 0.5584
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0576
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0649
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1010
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0571
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0761
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1057
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0702
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0969
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0989
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0752
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0745
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1063
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0648
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0903
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0933
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0679
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1149
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0843
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0853
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1297
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1008
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0908
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0815
+Training Results - Epoch: 16  Avg accuracy: 0.99 Avg loss: 0.0594
+Validation Results - Epoch: 16  Avg accuracy: 0.77 Avg loss: 0.6072
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0754
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.1084
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0617
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0534
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0591
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0611
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0659
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0599
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0789
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0732
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0707
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0685
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0773
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0546
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0708
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0855
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0706
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0422
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0732
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0446
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0454
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0729
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0797
+Training Results - Epoch: 17  Avg accuracy: 0.99 Avg loss: 0.0418
+Validation Results - Epoch: 17  Avg accuracy: 0.78 Avg loss: 0.5988
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0691
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0611
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0495
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0681
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0588
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0659
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0467
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0781
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0343
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0625
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0420
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0540
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0514
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0510
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0375
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0442
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0507
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0331
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0598
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0474
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0640
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0455
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0303
+Training Results - Epoch: 18  Avg accuracy: 0.99 Avg loss: 0.0351
+Validation Results - Epoch: 18  Avg accuracy: 0.76 Avg loss: 0.6772
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0622
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0444
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0290
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0361
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0667
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0450
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0631
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0438
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0396
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0378
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0401
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0309
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0373
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0284
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0458
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0276
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0832
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0269
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0394
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0263
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0542
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0439
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0550
+Training Results - Epoch: 19  Avg accuracy: 1.00 Avg loss: 0.0272
+Validation Results - Epoch: 19  Avg accuracy: 0.76 Avg loss: 0.6865
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0379
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0308
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0413
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0585
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0334
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0316
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0442
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0328
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0615
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0306
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0253
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0419
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0414
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0489
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0506
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0364
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0444
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0622
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0445
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0217
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0408
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0432
+torch.float32
+torch.float32
+Training Results - Avg loss: 0.0404
+Training Results - Epoch: 20  Avg accuracy: 1.00 Avg loss: 0.0224
+Validation Results - Epoch: 20  Avg accuracy: 0.76 Avg loss: 0.7109

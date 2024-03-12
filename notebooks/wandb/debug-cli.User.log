@@ -1,0 +1,21 @@
+2024-02-29 19:09:54 ERROR Traceback (most recent call last):
+  File "C:\Users\User\anaconda3\Lib\site-packages\wandb\cli\cli.py", line 105, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\anaconda3\Lib\site-packages\wandb\cli\cli.py", line 249, in login
+    wandb.login(
+  File "C:\Users\User\anaconda3\Lib\site-packages\wandb\sdk\wandb_login.py", line 85, in login
+    configured = _login(**kwargs)
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\User\anaconda3\Lib\site-packages\wandb\sdk\wandb_login.py", line 317, in _login
+    wlogin.prompt_api_key()
+  File "C:\Users\User\anaconda3\Lib\site-packages\wandb\sdk\wandb_login.py", line 247, in prompt_api_key
+    raise UsageError("api_key not configured (no-tty). call " + directive)
+wandb.errors.UsageError: api_key not configured (no-tty). call wandb login [your_api_key]
+
+2024-03-01 15:22:20 WARNING Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002058951D150>: Failed to resolve 'o151352.ingest.sentry.io' ([Errno 11002] getaddrinfo failed)")': /api/4504800232407040/envelope/
+2024-03-01 15:22:21 WARNING Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002058957E6D0>: Failed to resolve 'o151352.ingest.sentry.io' ([Errno 11002] getaddrinfo failed)")': /api/4504800232407040/envelope/
+2024-03-01 15:22:21 WARNING Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002058998D510>: Failed to resolve 'o151352.ingest.sentry.io' ([Errno 11002] getaddrinfo failed)")': /api/4504800232407040/envelope/
+2024-03-01 15:22:21 WARNING Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000205899A6F50>: Failed to resolve 'o151352.ingest.sentry.io' ([Errno 11002] getaddrinfo failed)")': /api/4504800232407040/envelope/
+2024-03-01 15:22:21 WARNING Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000205899A6D90>: Failed to resolve 'o151352.ingest.sentry.io' ([Errno 11002] getaddrinfo failed)")': /api/4504800232407040/envelope/
+2024-03-01 15:22:21 WARNING Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000205899EB810>: Failed to resolve 'o151352.ingest.sentry.io' ([Errno 11002] getaddrinfo failed)")': /api/4504800232407040/envelope/

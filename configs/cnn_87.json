@@ -5,10 +5,10 @@
     "seq_length": 150
   },
   "model": {
-    "fc": {
-      "input_dim": 500,
-      "hidden_dim": 100,
-      "target_size": 2 
+    "name": "cnn",
+    "backbone": {
+      "input_dim": 1,
+      "hidden_dim": 100
     }
   },
   "train": {

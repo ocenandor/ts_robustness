@@ -12,11 +12,18 @@ from torch import nn
 import wandb
 
 from src.datasets import make_dataset
-from src.models import TransformerClassification
+from src.models import TransformerClassification, CNNClassification, LSTMClassification
 from src.utils import build_optimizer, str2torch
 
 
+MODELS = {
+    'cnn': CNNClassification,
+    'transformer': TransformerClassification,
+    'lstm': LSTMClassification
+    }
+
 def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None):
+    torch.manual_seed(config['random_state'])
     if wandb_log:
         wandb.init(entity='ts-robustness', project='ml-course', config=config)
 
@@ -24,8 +31,9 @@ def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None):
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     config['train']['optimizer'] = str2torch(config['train']['optimizer'])
-
-    model = TransformerClassification(config).to(device) #TODO do it with argument or config
+    
+    model = MODELS[config['model']['name']] # TODO move all such dicts to one place
+    model = model(config).to(device)
 
     optimizer = build_optimizer(config, model)
     criterion = nn.CrossEntropyLoss()
@@ -67,7 +75,7 @@ def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None):
         else:
             save_dir = './saved_models'
     print(f'model will be saved in {save_dir}')
-    checkpoint_handler = ModelCheckpoint(dirname=save_dir, filename_prefix='best', #TODO add model_name
+    checkpoint_handler = ModelCheckpoint(dirname=save_dir, filename_prefix=config['model']['name'], # TODO make file pattern name
                                         n_saved=1, require_empty=False,
                                         score_function=lambda engine: engine.state.metrics['accuracy'],
                                         score_name="accuracy", global_step_transform=lambda *_: trainer.state.epoch)

@@ -4,59 +4,63 @@ import numpy as np
 
 class LSTMClassification(nn.Module):
 
-    def __init__(self, config, target_size=1):
+    def __init__(self, config):
         super(LSTMClassification, self).__init__()
-        self.lstm = nn.LSTM(input_size=config['model']['lstm']['input_dim'], 
-                            hidden_size=config['model']['lstm']['hidden_dim'],
-                            num_layers=config['model']['lstm']['num_layers'],
+        config_m = config['model']
+        self.lstm = nn.LSTM(input_size=config_m["lstm"]["input_dim"], 
+                            hidden_size=config_m["lstm"]["hidden_dim"],
+                            num_layers=config_m["lstm"]["num_layers"],
                             batch_first=True)
         self.fc = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(config['model']["lstm"]["hidden_dim"], config['model']["fc"]["fc_dim"]),
-            nn.Dropout(config['model']["fc"]["dropout"]),
+            nn.Linear(config_m["lstm"]["hidden_dim"], config_m["fc"]["fc_dim"]),
+            nn.Dropout(config_m["fc"]["dropout"]),
             nn.ReLU(),
-            nn.Linear(config['model']["fc"]["fc_dim"], target_size)
+            nn.Linear(config_m["fc"]["fc_dim"], 2)
             )
         
     def forward(self, input_):
+        if len(input_.shape) == 3:
+            input_ = input_.squeeze(2)
         lstm_out, (h, c) = self.lstm(input_)
         logits = self.fc(lstm_out)
         scores = F.sigmoid(logits)
         return scores
-
+    
+    def eval(self):
+        self.lstm.train()
+        self.fc.eval()
 
 class CNNClassification(nn.Module):
 
-    def __init__(self, input_dim, hidden_dim, target_size=2):
+    def __init__(self, config):
+        
         super(CNNClassification, self).__init__()
-
+        config_m = config['model']
+        self.backbone = nn.Sequential(
+            nn.Conv1d(in_channels=config_m['backbone']["input_dim"],
+                      out_channels=config_m['backbone']["hidden_dim"], 
+                      kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size=2, stride=2),
+            nn.Conv1d(in_channels=config_m['backbone']["hidden_dim"],
+                      out_channels=config_m['backbone']["hidden_dim"], 
+                      kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size=2, stride=2),
+        )
         self.fc = nn.Sequential(
-            nn.Conv1d(input_dim=config["cnn"]["input_dim"], 
-                      hidden_dim=config["cnn"]["hidden_dim"], 
-                      kernel_size=3, 
-                      stride=1, 
-                      padding=1),
-            nn.ReLU(),
-            nn.MaxPool1d(kernel_size=2, stride=2),
-
-            nn.Conv1d(input_dim=config["cnn"]["hidden_dim"], 
-                      hidden_dim=config["cnn"]["hidden_dim"], 
-                      kernel_size=3, 
-                      stride=1, 
-                      padding=1),
-            nn.ReLU(),
-            nn.MaxPool1d(kernel_size=2, stride=2),
-
             nn.Flatten(),
             nn.Linear(3700, 256),
             nn.ReLU(),  
-            nn.Linear(256, target_size), 
+            nn.Linear(256, 2), 
         )
 
     def forward(self, input_):
         if len(input_.shape) == 2:
             input_ = input_.unsqueeze(2)
         input_ = input_.permute(0, 2, 1)
+        input_ = self.backbone(input_)
         logits = self.fc(input_)
         return logits
 
@@ -89,5 +93,4 @@ class TransformerClassification(nn.Module):
         embedding_out = self.embedding_layer(input_).permute(0, 2, 1)
         encoder_out = self.transformer_encoder(embedding_out)
         logits = self.fc(encoder_out)
-        # scores = F.sigmoid(logits)
         return logits

@@ -5,6 +5,7 @@
     "seq_length": 150
   },
   "model": {
+    "name": "transformer",
     "fc": {
       "dropout": 0.3629351856326178,
       "inner_dim": 50
