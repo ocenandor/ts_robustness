@@ -1,0 +1,23 @@
+{
+    "model": {
+        "lstm": {
+            "input_dim": 500,
+            "hidden_dim": 100,
+            "num_layers": 2
+        },
+        "fc": {
+            "fc_dim": 50,
+            "dropout": 0
+        }
+    },
+    "train": {
+        "optimizer": "adam",
+        "lr": 0.0003,
+        "n_epoch": 20
+    },
+    "data": {
+        "seq_length": 500,
+        "step": 25
+    },
+    "random_state": 42
+}

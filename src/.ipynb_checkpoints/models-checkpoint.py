@@ -6,16 +6,16 @@ class LSTMClassification(nn.Module):
 
     def __init__(self, config, target_size=1):
         super(LSTMClassification, self).__init__()
-        self.lstm = nn.LSTM(input_size=config["lstm"]["input_dim"], 
-                            hidden_size=config["lstm"]["hidden_dim"],
-                            num_layers=config["lstm"]["num_layers"],
+        self.lstm = nn.LSTM(input_size=config['model']['lstm']['input_dim'], 
+                            hidden_size=config['model']['lstm']['hidden_dim'],
+                            num_layers=config['model']['lstm']['num_layers'],
                             batch_first=True)
         self.fc = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(config["lstm"]["hidden_dim"], config["fc"]["fc_dim"]),
-            nn.Dropout(config["fc"]["dropout"]),
+            nn.Linear(config['model']["lstm"]["hidden_dim"], config['model']["fc"]["fc_dim"]),
+            nn.Dropout(config['model']["fc"]["dropout"]),
             nn.ReLU(),
-            nn.Linear(config["fc"]["fc_dim"], target_size)
+            nn.Linear(config['model']["fc"]["fc_dim"], target_size)
             )
         
     def forward(self, input_):
@@ -23,6 +23,43 @@ class LSTMClassification(nn.Module):
         logits = self.fc(lstm_out)
         scores = F.sigmoid(logits)
         return scores
+
+
+class CNNClassification(nn.Module):
+
+    def __init__(self, input_dim, hidden_dim, target_size=2):
+        super(CNNClassification, self).__init__()
+
+        self.fc = nn.Sequential(
+            nn.Conv1d(input_dim=config["cnn"]["input_dim"], 
+                      hidden_dim=config["cnn"]["hidden_dim"], 
+                      kernel_size=3, 
+                      stride=1, 
+                      padding=1),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size=2, stride=2),
+
+            nn.Conv1d(input_dim=config["cnn"]["hidden_dim"], 
+                      hidden_dim=config["cnn"]["hidden_dim"], 
+                      kernel_size=3, 
+                      stride=1, 
+                      padding=1),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size=2, stride=2),
+
+            nn.Flatten(),
+            nn.Linear(3700, 256),
+            nn.ReLU(),  
+            nn.Linear(256, target_size), 
+        )
+
+    def forward(self, input_):
+        if len(input_.shape) == 2:
+            input_ = input_.unsqueeze(2)
+        input_ = input_.permute(0, 2, 1)
+        logits = self.fc(input_)
+        return logits
+
     
 class TransformerClassification(nn.Module):
 
@@ -42,7 +79,7 @@ class TransformerClassification(nn.Module):
             nn.Linear(config_d['seq_length'] * n_features, self.fc_dim),
             nn.Dropout(config_m['fc']['dropout']),
             nn.ReLU(),
-            nn.Linear(self.fc_dim, 1)
+            nn.Linear(self.fc_dim, 2)
             )
         
     def forward(self, input_):
@@ -52,5 +89,5 @@ class TransformerClassification(nn.Module):
         embedding_out = self.embedding_layer(input_).permute(0, 2, 1)
         encoder_out = self.transformer_encoder(embedding_out)
         logits = self.fc(encoder_out)
-        scores = F.sigmoid(logits)
-        return scores
+        # scores = F.sigmoid(logits)
+        return logits
