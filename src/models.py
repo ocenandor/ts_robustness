@@ -6,23 +6,23 @@ class LSTMClassification(nn.Module):
 
     def __init__(self, config, target_size=1):
         super(LSTMClassification, self).__init__()
-        self.lstm = nn.LSTM(input_size=config["input_dim"], 
-                            hidden_size=config["hidden_dim"],
-                            num_layers=config["num_layers"],
+        self.lstm = nn.LSTM(input_size=config["lstm"]["input_dim"], 
+                            hidden_size=config["lstm"]["hidden_dim"],
+                            num_layers=config["lstm"]["num_layers"],
                             batch_first=True)
         self.fc = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(500 * config["hidden_dim"], config["hidden_dim"]),
-            nn.Dropout(0.5),
+            nn.Linear(config["lstm"]["hidden_dim"], config["fc"]["fc_dim"]),
+            nn.Dropout(config["fc"]["dropout"]),
             nn.ReLU(),
-            nn.Linear(config["hidden_dim"], target_size)
+            nn.Linear(config["fc"]["fc_dim"], target_size)
             )
         
     def forward(self, input_):
         lstm_out, (h, c) = self.lstm(input_)
         logits = self.fc(lstm_out)
         scores = F.sigmoid(logits)
-        return scores.double()
+        return scores
     
 class TransformerClassification(nn.Module):
 
