@@ -7,7 +7,8 @@ class LSTMClassification(nn.Module):
     def __init__(self, config):
         super(LSTMClassification, self).__init__()
         config_m = config['model']
-        self.lstm = nn.LSTM(input_size=config_m["lstm"]["input_dim"], 
+        config_d = config['data']
+        self.lstm = nn.LSTM(input_size=config_d["seq_length"], 
                             hidden_size=config_m["lstm"]["hidden_dim"],
                             num_layers=config_m["lstm"]["num_layers"],
                             batch_first=True)
