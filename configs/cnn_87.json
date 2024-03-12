@@ -1,4 +1,4 @@
-config = {
+{
   "data": {
     "step": 50,
     "batch_size": 256,
