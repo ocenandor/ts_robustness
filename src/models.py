@@ -31,11 +31,19 @@ class CNNClassification(nn.Module):
         super(CNNClassification, self).__init__()
 
         self.fc = nn.Sequential(
-            nn.Conv1d(input_dim, hidden_dim, kernel_size=3, stride=1, padding=1),
+            nn.Conv1d(input_dim=config["cnn"]["input_dim"], 
+                      hidden_dim=config["cnn"]["hidden_dim"], 
+                      kernel_size=3, 
+                      stride=1, 
+                      padding=1),
             nn.ReLU(),
             nn.MaxPool1d(kernel_size=2, stride=2),
 
-            nn.Conv1d(hidden_dim, hidden_dim, kernel_size=3, stride=1, padding=1),
+            nn.Conv1d(hidden_dim=config["cnn"]["hidden_dim"], 
+                      hidden_dim=config["cnn"]["hidden_dim"], 
+                      kernel_size=3, 
+                      stride=1, 
+                      padding=1),
             nn.ReLU(),
             nn.MaxPool1d(kernel_size=2, stride=2),
 
