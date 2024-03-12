@@ -12,13 +12,14 @@ from torch import nn
 import wandb
 
 from src.datasets import make_dataset
-from src.models import TransformerClassification, CNNClassification
+from src.models import TransformerClassification, CNNClassification, LSTMClassification
 from src.utils import build_optimizer, str2torch
 
 
 MODELS = {
     'cnn': CNNClassification,
-    'transformer': TransformerClassification
+    'transformer': TransformerClassification,
+    'lstm': LSTMClassification
     }
 
 def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None):
