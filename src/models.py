@@ -6,16 +6,16 @@ class LSTMClassification(nn.Module):
 
     def __init__(self, config, target_size=1):
         super(LSTMClassification, self).__init__()
-        self.lstm = nn.LSTM(input_size=config["lstm"]["input_dim"], 
-                            hidden_size=config["lstm"]["hidden_dim"],
-                            num_layers=config["lstm"]["num_layers"],
+        self.lstm = nn.LSTM(input_size=config['model']['lstm']['input_dim'], 
+                            hidden_size=config['model']['lstm']['hidden_dim'],
+                            num_layers=config['model']['lstm']['num_layers'],
                             batch_first=True)
         self.fc = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(config["lstm"]["hidden_dim"], config["fc"]["fc_dim"]),
-            nn.Dropout(config["fc"]["dropout"]),
+            nn.Linear(config['model']["lstm"]["hidden_dim"], config['model']["fc"]["fc_dim"]),
+            nn.Dropout(config['model']["fc"]["dropout"]),
             nn.ReLU(),
-            nn.Linear(config["fc"]["fc_dim"], target_size)
+            nn.Linear(config['model']["fc"]["fc_dim"], target_size)
             )
         
     def forward(self, input_):
@@ -39,7 +39,7 @@ class CNNClassification(nn.Module):
             nn.ReLU(),
             nn.MaxPool1d(kernel_size=2, stride=2),
 
-            nn.Conv1d(hidden_dim=config["cnn"]["hidden_dim"], 
+            nn.Conv1d(input_dim=config["cnn"]["hidden_dim"], 
                       hidden_dim=config["cnn"]["hidden_dim"], 
                       kernel_size=3, 
                       stride=1, 
