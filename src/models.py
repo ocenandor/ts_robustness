@@ -23,6 +23,35 @@ class LSTMClassification(nn.Module):
         logits = self.fc(lstm_out)
         scores = F.sigmoid(logits)
         return scores
+
+
+class CNNClassification(nn.Module):
+
+    def __init__(self, input_dim, hidden_dim, target_size=2):
+        super(CNNClassification, self).__init__()
+
+        self.fc = nn.Sequential(
+            nn.Conv1d(input_dim, hidden_dim, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size=2, stride=2),
+
+            nn.Conv1d(hidden_dim, hidden_dim, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size=2, stride=2),
+
+            nn.Flatten(),
+            nn.Linear(3700, 256),
+            nn.ReLU(),  
+            nn.Linear(256, target_size), 
+        )
+
+    def forward(self, input_):
+        if len(input_.shape) == 2:
+            input_ = input_.unsqueeze(2)
+        input_ = input_.permute(0, 2, 1)
+        logits = self.fc(input_)
+        return logits
+
     
 class TransformerClassification(nn.Module):
 
