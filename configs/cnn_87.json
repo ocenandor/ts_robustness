@@ -1,0 +1,23 @@
+config = {
+  "data": {
+    "step": 50,
+    "batch_size": 256,
+    "seq_length": 150
+  },
+  "model": {
+    "fc": {
+      "input_dim": 500,
+      "hidden_dim": 100,
+      "target_size": 2 
+    }
+  },
+  "train": {
+    "lr": 0.0006345611256400737,
+    "n_epoch": 30,
+    "optimizer": "adam",
+    "scheduler_config": {
+      "type": None
+    }
+  },
+  "random_state": 42
+}
