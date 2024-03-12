@@ -47,7 +47,7 @@ def str2torch(method: str):
         'elu': F.elu,
         'gelu': F.gelu,
         'relu': F.relu,
-        'sigmoid': F.sigmoid
+        'sigmoid': F.sigmoid,
     }
     return torch_dict[method]
 
