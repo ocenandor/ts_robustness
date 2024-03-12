@@ -27,36 +27,35 @@ class LSTMClassification(nn.Module):
 
 class CNNClassification(nn.Module):
 
-    def __init__(self, input_dim, hidden_dim, target_size=2):
+    def __init__(self, config):
+        
         super(CNNClassification, self).__init__()
+        config_m = config['model']
+        self.backbone = nn.Sequential(
+            nn.Conv1d(in_channels=config_m['backbone']["input_dim"],
+                      out_channels=config_m['backbone']["hidden_dim"], 
+                      kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size=2, stride=2),
 
+            nn.Conv1d(in_channels=config_m['backbone']["hidden_dim"],
+                      out_channels=config_m['backbone']["hidden_dim"], 
+                      kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size=2, stride=2),
+        )
         self.fc = nn.Sequential(
-            nn.Conv1d(input_dim=config["cnn"]["input_dim"], 
-                      hidden_dim=config["cnn"]["hidden_dim"], 
-                      kernel_size=3, 
-                      stride=1, 
-                      padding=1),
-            nn.ReLU(),
-            nn.MaxPool1d(kernel_size=2, stride=2),
-
-            nn.Conv1d(hidden_dim=config["cnn"]["hidden_dim"], 
-                      hidden_dim=config["cnn"]["hidden_dim"], 
-                      kernel_size=3, 
-                      stride=1, 
-                      padding=1),
-            nn.ReLU(),
-            nn.MaxPool1d(kernel_size=2, stride=2),
-
             nn.Flatten(),
             nn.Linear(3700, 256),
             nn.ReLU(),  
-            nn.Linear(256, target_size), 
+            nn.Linear(256, 2), 
         )
 
     def forward(self, input_):
         if len(input_.shape) == 2:
             input_ = input_.unsqueeze(2)
         input_ = input_.permute(0, 2, 1)
+        input_ = self.backbone(input_)
         logits = self.fc(input_)
         return logits
 
@@ -89,5 +88,4 @@ class TransformerClassification(nn.Module):
         embedding_out = self.embedding_layer(input_).permute(0, 2, 1)
         encoder_out = self.transformer_encoder(embedding_out)
         logits = self.fc(encoder_out)
-        # scores = F.sigmoid(logits)
         return logits
