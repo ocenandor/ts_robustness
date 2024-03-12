@@ -1,3 +1,0 @@
-[submodule "DeepFool"]
-	path = DeepFool
-	url = git@github.com:ocenandor/DeepFool.git
