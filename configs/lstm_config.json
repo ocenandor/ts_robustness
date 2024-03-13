@@ -2,7 +2,6 @@
   "model": {
 	"name": "lstm",
     "lstm": {
-      "input_dim": 500,
       "hidden_dim": 100,
       "num_layers": 2
     },

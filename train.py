@@ -23,10 +23,11 @@ MODELS = {
     }
 
 def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None):
-    torch.manual_seed(config['random_state'])
+    
     if wandb_log:
         wandb.init(entity='ts-robustness', project='ml-course', config=config)
-
+        config = wandb.config
+    torch.manual_seed(config['random_state'])
     train_dataloader, _, test_dataloader = make_dataset(config, dataset_dir)
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
