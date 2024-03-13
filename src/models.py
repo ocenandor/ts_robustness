@@ -44,7 +44,6 @@ class CNNClassification(nn.Module):
                       kernel_size=3, padding=1),
             nn.ReLU(),
             nn.MaxPool1d(kernel_size=2, stride=2),
-
             nn.Conv1d(in_channels=config_m['backbone']["hidden_dim"],
                       out_channels=config_m['backbone']["hidden_dim"], 
                       kernel_size=3, padding=1),
