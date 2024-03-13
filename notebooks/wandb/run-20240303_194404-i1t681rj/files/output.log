@@ -1,7 +1,0 @@
-
-device: cuda
-Current run is terminating due to exception: Found dtype Float but expected Double
-Engine run is terminating due to exception: Found dtype Float but expected Double
-Current run is terminating due to exception: Found dtype Float but expected Double
-Engine run is terminating due to exception: Found dtype Float but expected Double
-torch.float32

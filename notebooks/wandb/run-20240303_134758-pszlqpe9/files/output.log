@@ -1,6 +1,0 @@
-
-device: cuda
-D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\..\src\utils.py:24: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ..\torch\csrc\utils\tensor_new.cpp:278.)
-  xs = torch.tensor(xs).squeeze(-1).permute(0, 2, 1)
-Current run is terminating due to exception: Using a target size (torch.Size([128, 1])) that is different to the input size (torch.Size([128, 2])) is deprecated. Please ensure they have the same size.
-Engine run is terminating due to exception: Using a target size (torch.Size([128, 1])) that is different to the input size (torch.Size([128, 2])) is deprecated. Please ensure they have the same size.

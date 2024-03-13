@@ -1,8 +1,0 @@
-
-device: cuda
-D:\Study\Skoltech\MachineLearning\ts_robustness\notebooks\..\src\utils.py:24: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ..\torch\csrc\utils\tensor_new.cpp:278.)
-  xs = torch.tensor(xs).squeeze(-1).permute(0, 2, 1)
-C:\Users\User\anaconda3\Lib\site-packages\torch\nn\modules\rnn.py:878: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ..\aten\src\ATen\native\cudnn\RNN.cpp:982.)
-  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
-Current run is terminating due to exception: shape '[100000, 1]' is invalid for input of size 1000000
-Engine run is terminating due to exception: shape '[100000, 1]' is invalid for input of size 1000000

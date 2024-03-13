@@ -1,3 +1,0 @@
-
-device: cuda
-Current run is terminating due to exception: Found dtype Double but expected Float
