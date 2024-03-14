@@ -1,12 +1,15 @@
 import argparse
 import json
+import sys
 
 import joblib
 import numpy as np
 import torch
 import tqdm
 
-from src.attacks.bim import bim # TODO do more elegant import with packages and __init__
+# TODO do more elegant import with packages and __init__
+sys.path.append('.')
+from src.attacks.bim import bim
 from src.attacks.deepfool import deepfool
 from src.attacks.simba import simba
 from src.datasets import make_dataset
@@ -65,7 +68,6 @@ if __name__ == '__main__':
 
     iters = test(config, args.weights, args.attack, args.strength, args.max_iter, data_dir=args.data)
     model_name = config['model']['name']
-    joblib.dump(iters, f'{model_name}_{args.attack}_transformer.pkl')
     unique, counts = np.unique(iters, return_counts=True)
     print('distribution of number of iterations till inversion of label')
     print(unique)

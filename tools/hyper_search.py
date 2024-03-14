@@ -6,8 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import torch.nn as nn
-import torch.optim.lr_scheduler as lr_scheduler
-import wandb
+import torch.optim.lr_scheduler as lr_scheduler #FIXME change imports
 from ignite.contrib.handlers import wandb_logger
 from ignite.engine import (Engine, Events, create_supervised_evaluator,
                            create_supervised_trainer)
@@ -20,15 +19,16 @@ from torch import nn
 from torch.functional import F
 from torch.utils.data import DataLoader, Dataset, SubsetRandomSampler
 
-# sys.path.append('../')
+import wandb
+
+sys.path.append('..')
+from train import train
+
 from src.datasets import FordDataset
 from src.models import TransformerClassification
 from src.utils import build_optimizer, duplicate_batch, split_batch, str2torch
-from train import train
 
-
-
-if __name__ == '__main__':
+if __name__ == '__main__': #TODO need test
     # Load config 
     with open('configs/sweep1_transformer.json') as f:
         config = json.load(f)

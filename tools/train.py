@@ -1,5 +1,6 @@
 import argparse
 import json
+import sys
 
 import torch
 import torch.nn as nn
@@ -9,6 +10,7 @@ from ignite.metrics import Accuracy, Loss
 from torch import nn
 
 import wandb
+sys.path.append('.')
 from src.datasets import make_dataset
 from src.models import (CNNClassification, LSTMClassification,
                         TransformerClassification)
