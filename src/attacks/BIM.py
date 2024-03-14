@@ -1,33 +1,42 @@
 import torch
-import torch.nn as nn
 
-def BIM(model, input, target, epsilon, num_iterations, device='cuda'):
+def bim(input, model, epsilon=0.01, max_iter=50, device='cpu'):
     '''
     model
     input - signal which must be attacked
-    target - true label of signal
     epsilon - parameter of attack
-    num_iterations - number of iterations for attack
+    max_iter - number of iterations for attack
     
     return:
     adversarial_input - attacked signal
     '''
-    model.train()
-    loss_function = torch.nn.BCELoss()
-
-    if(input.dim() == 1):
-        input = input.unsqueeze(0)
-        target = target.unsqueeze(0)
-    input = input.to(device)
-    target = target.to(device)
-
-    adversarial_input = input.clone().requires_grad_(True)
     
-    for _ in range(num_iterations):
+    assert type(input) == torch.Tensor, 'Use tensored input'
+    if input.dim() == 1:
+        input = input.unsqueeze(0)
+    elif input.dim() == 2:
+        assert input.shape[0] == 1, 'Only single sample input available'
+    
+    loss_function = torch.nn.CrossEntropyLoss()
+    input = input.to(device)
+                     
+    model.eval()
+    with torch.no_grad():
+        target = torch.argmax(model(input), 1)
+
+
+    adversarial_input = input.clone()
+    
+    for iter in range(max_iter):
         adversarial_input.requires_grad = True
         predictions = model(adversarial_input)
-        loss = loss_function(predictions.flatten(), target) 
+        perturbed_target = torch.argmax(predictions, 1)
+        if perturbed_target != target: # early stopping
+            break
+
+        loss = loss_function(predictions, target) 
         grad_ = torch.autograd.grad(loss, adversarial_input, retain_graph=True)[0]
         adversarial_input = adversarial_input.data + epsilon * torch.sign(grad_)
+        
     
-    return adversarial_input
+    return adversarial_input, iter
