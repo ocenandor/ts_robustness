@@ -1,6 +1,5 @@
 import argparse
 import json
-import sys
 
 import torch
 import torch.nn as nn
@@ -10,11 +9,10 @@ from ignite.metrics import Accuracy, Loss
 from torch import nn
 
 import wandb
-
 from src.datasets import make_dataset
-from src.models import TransformerClassification, CNNClassification, LSTMClassification
+from src.models import (CNNClassification, LSTMClassification,
+                        TransformerClassification)
 from src.utils import build_optimizer, str2torch
-
 
 MODELS = {
     'cnn': CNNClassification,
@@ -28,6 +26,8 @@ def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None):
         wandb.init(entity='ts-robustness', project='ml-course', config=config)
         config = wandb.config
     torch.manual_seed(config['random_state'])
+    torch.backends.cudnn.deterministic = True
+
     train_dataloader, _, test_dataloader = make_dataset(config, dataset_dir)
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -112,7 +112,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("config", type=str, help="train json config")
     parser.add_argument("--dir", type=str, default=None, help="dir for saving model weights")
-    parser.add_argument("--wandb", type=bool, default=True, help="enable wandb logging")
+    parser.add_argument("--wandb", type=bool, default=True, help="enable wandb logging, --no-wandb to turn logging off",
+                        action=argparse.BooleanOptionalAction)
     parser.add_argument("--data", type=str, default='data/FordA', help="path to data folder")
     
     args = parser.parse_args()

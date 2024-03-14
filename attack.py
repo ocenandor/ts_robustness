@@ -54,8 +54,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("config", type=str, help="train json config")
     parser.add_argument("weights", type=str, help="weights of model")
-    parser.add_argument("--attack", type=str, default='deepfool', help="type of attack")
-    parser.add_argument("--strength", type=float, default=0.01, help="strength parameter of attack")
+    parser.add_argument("attack", type=str, help="type of attack")
+    parser.add_argument("-s", "--strength", type=float, default=0.01, help="strength parameter of attack")
     parser.add_argument("--max_iter", type=int, default=30, help="strength parameter of attack")
     parser.add_argument("--data", type=str, default='data/FordA', help="path to data folder")
     
