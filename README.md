@@ -35,6 +35,6 @@ conda env create --file env.yml -n ts_robustness
 ### Implementation
 | Model / Attack | DeepFool | SimBA | IFGSM |
 | :-------------:| :-------------: | :-------------: | :-------------: |
-| CNN   | :heavy_check_mark:  | :x: | :x: |
-| LSTM  | :heavy_check_mark:  | :x: | :x: |
-| Transformer  | :heavy_check_mark:  | :x: | :x: |
+| CNN   | :heavy_check_mark:  | :x: | :heavy_check_mark: |
+| LSTM  | :heavy_check_mark:  | :x: | :heavy_check_mark: |
+| Transformer  | :heavy_check_mark:  | :x: | :heavy_check_mark: |
