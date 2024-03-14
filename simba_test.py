@@ -54,7 +54,7 @@ def test(config, weights, step_size=BUDGET/50, budget=BUDGET):
         test_sample, label = test_dataset[i]
         test_sample = torch.from_numpy(test_sample).unsqueeze(1).to(device)
 	basis = CartesianSearchVectors(test_sample.size())
-        _, _, steps, _, _:q = simba.simba(test_sample, model, int(label), basis=basis, step_size=BUDGET / 50, budget=BUDGET)
+        _, _, steps, _, _ = simba.simba(test_sample, model, int(label), basis=basis, step_size=BUDGET / 50, budget=BUDGET)
 
         iters.append(steps)
     return iters
