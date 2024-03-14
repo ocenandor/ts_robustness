@@ -76,10 +76,11 @@ def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None):
         else:
             save_dir = './saved_models'
     print(f'model will be saved in {save_dir}')
-    checkpoint_handler = ModelCheckpoint(dirname=save_dir, filename_prefix=config['model']['name'], # TODO make file pattern name
-                                        n_saved=1, require_empty=False,
-                                        score_function=lambda engine: engine.state.metrics['accuracy'],
-                                        score_name="accuracy", global_step_transform=lambda *_: trainer.state.epoch)
+    checkpoint_handler = ModelCheckpoint(
+        dirname=save_dir, filename_prefix=config['model']['name'], filename_pattern="{filename_prefix}.pt",
+        require_empty=False, score_name="accuracy", score_function=lambda engine: engine.state.metrics['accuracy'],
+        global_step_transform=lambda *_: trainer.state.epoch
+        )
     test_evaluator.add_event_handler(Events.EPOCH_COMPLETED, checkpoint_handler, {"model": model})
 
     @trainer.on(Events.EPOCH_COMPLETED)
