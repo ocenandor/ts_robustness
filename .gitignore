@@ -10,3 +10,4 @@ notebooks/test_cnn.ipynb
 **.out
 **sweeps
 *.pt
+**FordA/

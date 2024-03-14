@@ -27,11 +27,10 @@ ATTACKS = {
 }
 
 
-def test(config, weights, attack='deepfool', parameter=0.02, max_iter=50):
+def test(config, weights, attack='deepfool', parameter=0.02, max_iter=50, data_dir='data/FordA'):
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-
     ### Initialize model and dataset
-    _, test_dataset, _, _ = make_dataset(config, args.data, return_loader=False)
+    _, test_dataset, _, _ = make_dataset(config, data_dir, return_loader=False)
     model = MODELS[config['model']['name']] # TODO move all such dicts to one place
     model = model(config).to(device)
     weights = torch.load(weights, map_location='cpu')
@@ -64,7 +63,7 @@ if __name__ == '__main__':
     with open(args.config) as f:
         config =  json.load(f)
 
-    iters = test(config, args.weights, args.attack, args.strength, args.max_iter)
+    iters = test(config, args.weights, args.attack, args.strength, args.max_iter, data_dir=args.data)
     model_name = config['model']['name']
     joblib.dump(iters, f'{model_name}_{args.attack}_transformer.pkl')
     unique, counts = np.unique(iters, return_counts=True)
