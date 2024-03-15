@@ -1,0 +1,52 @@
+{
+    "name": "sweep_transformer",
+    "method": "bayes",
+    "metric": {"goal": "maximize", "name": "test_accuracy"},
+    "parameters": {
+        "model": {
+          "parameters": {
+            "name": {"values": ["transformer"]},
+            "embedding": {
+              "parameters": {
+                "in_channels": {"values": [1]},
+                "out_channels": {"values": [16, 25, 64]}
+              }
+            },
+            "encoder": {
+              "parameters": {
+                "layer_norm_eps": {"min": 0.00001, "max": 0.01},
+                "dropout": {"min": 0.3, "max": 0.9},
+                "activation": {"values": ["relu", "gelu"]}
+              }
+            },
+            "num_layers": {"values": [1, 2]},
+            "fc": {
+              "parameters": {
+                "inner_dim": {"values": [25, 50, 100]},
+                "dropout": {"min": 0.3, "max": 0.9}
+              }
+            }
+          }
+        },
+        "train": {
+          "parameters": {
+            "optimizer": {"values": ["adam"]},
+            "lr": {"min": 0.000001, "max": 0.001},
+            "n_epoch": {"values": [30]},
+            "scheduler_config": {
+              "parameters": {
+                "type": {"values": [null]}
+              }
+            }
+          }
+        },
+        "data": {
+          "parameters": {
+            "seq_length": {"values": [500]},
+            "step": {"values": [50]},
+            "batch_size": {"values": [32, 64, 128, 256]}
+          }
+        },
+        "random_state": {"values": [42]}
+    }
+}
