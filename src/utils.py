@@ -75,9 +75,6 @@ def build_scheduler(optimizer, scheduler_config):
             return max(eta_min, 5 * (1 + np.cos(np.pi * epoch / T_max))) * gamma ** (epoch)        
         scheduler = LambdaLR(optimizer, lr_lambda)
 
-    if scheduler_config["warmup_epochs"] >= 1 and scheduler_config['type'] != 'CosineLR':
-        warmup = GradualWarmupScheduler(optimizer, multiplier=1.5, total_epoch=5, after_scheduler=scheduler)
-    
     return scheduler, warmup
 
 

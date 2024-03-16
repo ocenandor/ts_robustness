@@ -30,7 +30,7 @@ ATTACKS = {
 }
 
 
-def test(config, weights, attack='deepfool', parameter=0.02, max_iter=50, data_dir='data/FordA'):
+def test(config: dict, weights: str, attack='deepfool', parameter=0.02, max_iter=50, data_dir='data/FordA', verbose=True):
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     ### Initialize model and dataset
     _, test_dataset, _, _ = make_dataset(config, data_dir, return_loader=False)
@@ -45,11 +45,11 @@ def test(config, weights, attack='deepfool', parameter=0.02, max_iter=50, data_d
     ### Test model
     iters = []
     # for i in tqdm.tqdm(range(len(test_dataset))):
-    for i in tqdm.tqdm(range(20)):
+    for i in tqdm.tqdm(range(20), disable=not verbose):
         test_sample = torch.from_numpy(test_dataset[i][0]).to(device) # TODO unsqueeze for adding "feature" dimension, but should change for more interpretibility
         _, loop_i = attack(test_sample, model, parameter, max_iter=max_iter, device=device)
         iters.append(loop_i)
-    return iters
+    return np.array(iters)
 
 if __name__ == '__main__':
 
