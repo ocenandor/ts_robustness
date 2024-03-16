@@ -10,3 +10,4 @@ notebooks/test_cnn.ipynb
 *.pt
 **notebooks/
 **FordA/
+**.csv
