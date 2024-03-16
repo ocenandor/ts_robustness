@@ -30,8 +30,8 @@ from src.utils import build_optimizer, duplicate_batch, split_batch, str2torch
 
 if __name__ == '__main__': #TODO need test
     # Load config 
-    with open('configs/sweep1_transformer.json') as f:
+    with open('configs/sweeps/sweep3_cnn.json') as f:
         config = json.load(f)
     # Init wandb sweep
     sweep_id = wandb.sweep(entity='ts-robustness', sweep=config, project="ml-course")
-    wandb.agent(sweep_id, partial(train, dataset_dir='data/FordA'), count=200)
+    wandb.agent(sweep_id, partial(train, dataset_dir='data/FordA'), count=500)

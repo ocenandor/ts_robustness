@@ -38,6 +38,7 @@ class CNNClassification(nn.Module):
         
         super(CNNClassification, self).__init__()
         config_m = config['model']
+        config_d = config['data']
         self.backbone = nn.Sequential(
             nn.Conv1d(in_channels=config_m['backbone']["input_dim"],
                       out_channels=config_m['backbone']["hidden_dim"], 
@@ -52,7 +53,7 @@ class CNNClassification(nn.Module):
         )
         self.fc = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(3700, 256),
+            nn.Linear(config_d['seq_length'] // 2 // 2 * config_m['backbone']["hidden_dim"], 256),
             nn.ReLU(),  
             nn.Linear(256, 2), 
         )
