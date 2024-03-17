@@ -1,12 +1,12 @@
 # Robustness of time-series models to adversarial attacks
 ## Abstract :memo:
 
-Adversarial attacks are specialized techniques used to modify original data, aiming to degrade the accuracy of model predictions. 
-While prevalent in computer vision, these attacks are also relevant in the time-series domain. 
-Models exhibit varying susceptibility levels to such attacks. 
+Adversarial attacks are special techniques used to modify input data samples, aiming to changing model predictions and disrupt its work. 
+This topic is very popular in computer vision, but can also be transferred to the time-series domain. 
+Different machine learning models have different levels of sensitivity to adversarial attacks, the so-called robustness.
 
-In our project we assess the robustness of time-series models against 3 adversarial strategies (DeepFool, SimBA, BIM). 
-Specifically, the project entails implementing and training 3 simple custom architectures (transformer, CNN, LSTM) for time series classification tasks, subjecting them to various attacks, and evaluating the impact on performance metrics. 
+In our project we compare the robustness of models used in time-series binary classification task against $3$ adversarial strategies: DeepFool, SimBA and BIM. 
+Specifically, we train $3$ state-of-the-art neural networks (LSTM, CNN, Transformer) with custom architectures for FordA dataset classification task, subjecting them to attacks, and compare the level of robustness. 
 
 ## Quick start :rocket:
 1. Download repo:
@@ -24,9 +24,9 @@ docker build . -t ts_robustness
 docker run  --gpus device=0 -it --rm ts_robustness
 ```
 
-(In progress)4. Run main.sh to download data, train models and get some statistics in report
+4. Run main.py to download data, train models and get some statistics of the models' robustness in report
 ```bash
-bash main.sh
+python main.py
 ```
 
 
