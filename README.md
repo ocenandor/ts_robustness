@@ -50,12 +50,19 @@ configs - directory with models' configuration files
 
 
 ## Results :bar_chart:
-### Test Quality
-| Model / Dataset | FordA (acc, %)|
+### Test Accuracy, %
+| Model / Dataset | FordA (length=500)|
 | :-------------:| :-------------: |
-| CNN   | **89**  | 
-| LSTM  | **78**  |
-| Transformer  | **88** | 
+| CNN   | **86.80 CI 95% [85.94; 87.43]**  | 
+| LSTM  | **79.56 CI 95% [79.50; 79.61]**  |
+| Transformer  | **75.96 CI 95% [75.76; 76.15]** | 
+
+### Test Accuracy (Max), %
+| Model / Dataset | FordA (length=500)| FordA (length=150)|
+| :-------------:| :-------------: |:-------------:|
+| CNN   | **90.45**  |**89.48** |
+| LSTM  | **81.36**|**88.09**|
+| Transformer  | **77.80** | **89.11**|
 
 ### Implementation
 | Model / Attack | DeepFool | SimBA | IFGSM |
