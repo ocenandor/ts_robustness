@@ -127,7 +127,7 @@ def simba(signal: torch.Tensor,
 
     l2_norm.append(vector_norm(pertubation.cpu()))
 
-    return pertubation, steps
+    return pertubation, steps, prediction.item() != label, (vector_norm(pertubation - signal) / vector_norm(signal)).detach().cpu().numpy()
 
 
 def predict(model, signal: torch.Tensor) -> Union[torch.Tensor, torch.Tensor]:

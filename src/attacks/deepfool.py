@@ -1,5 +1,6 @@
 import numpy as np
 import torch
+from torch.linalg import vector_norm
 
 
 def deepfool(input, model, epsilon=0.02, max_iter=50, device='cpu', *args, num_classes=2):
@@ -58,6 +59,7 @@ def deepfool(input, model, epsilon=0.02, max_iter=50, device='cpu', *args, num_c
                 w = w_k
         
         r_tot += (pert+1e-4) * w / (np.linalg.norm(w) + 1e-12)
-        adversarial_input = input + (1 + epsilon) * r_tot.to(device)
-        
-    return adversarial_input, iter
+        adversarial_input = input + epsilon * r_tot.to(device)
+    
+    l2norm = (vector_norm(adversarial_input - input) / vector_norm(input)).detach().cpu().numpy()    
+    return adversarial_input, iter, perturbed_target != target, l2norm

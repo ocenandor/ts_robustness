@@ -1,4 +1,5 @@
 import torch
+from torch.linalg import vector_norm
 
 def bim(input, model, epsilon=0.01, max_iter=50, device='cpu'):
     '''
@@ -38,5 +39,5 @@ def bim(input, model, epsilon=0.01, max_iter=50, device='cpu'):
         grad_ = torch.autograd.grad(loss, adversarial_input, retain_graph=True)[0]
         adversarial_input = adversarial_input.data + epsilon * torch.sign(grad_)
         
-    
-    return adversarial_input, iter
+    l2norm = (vector_norm(adversarial_input - input) / vector_norm(input)).detach().cpu().numpy()
+    return adversarial_input, iter, perturbed_target != target, l2norm
