@@ -5,8 +5,8 @@ Adversarial attacks are special techniques used to modify input data samples, ai
 This topic is very popular in computer vision, but can also be transferred to the time-series domain. 
 Different machine learning models have different levels of sensitivity to adversarial attacks, the so-called robustness.
 
-In our project we compare the robustness of models used in time-series binary classification task against $3$ adversarial strategies: DeepFool, SimBA and BIM. 
-Specifically, we train $3$ state-of-the-art neural networks (LSTM, CNN, Transformer) with custom architectures for FordA dataset classification task, subjecting them to attacks, and compare the level of robustness. 
+In our project we compare the robustness of models used in time-series binary classification task against 3 adversarial strategies: DeepFool, SimBA and BIM. 
+Specifically, we train 3 state-of-the-art neural networks (LSTM, CNN, Transformer) with custom architectures for FordA dataset classification task, subjecting them to attacks, and compare the level of robustness. 
 
 ## Quick start :rocket:
 1. Download repo:
@@ -65,7 +65,7 @@ configs - directory with models' configuration files
 | Transformer  | **77.80** | **89.11**|
 
 ### Implementation
-| Model / Attack | DeepFool | SimBA | IFGSM |
+| Model / Attack | DeepFool | SimBA | IFGSM (BIM)|
 | :-------------:| :-------------: | :-------------: | :-------------: |
 | CNN   | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: |
 | LSTM  | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: |
