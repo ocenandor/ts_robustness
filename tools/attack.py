@@ -1,4 +1,5 @@
 import argparse
+import random
 import json
 import sys
 
@@ -25,14 +26,22 @@ ATTACKS = {
     'bim': bim,
     'deepfool': deepfool,
     'simba': simba
-}
+    }
+
+ATTACK_PARMS = {
+    'bim': (0.002, 200),
+    'deepfool': (0.5, 50),
+    'simba': (10, 1000)
+    }
 
 
 def test(config: dict, weights: str, attack='deepfool',
          parameter=0.02, max_iter=50, data_dir='data/FordA',
-         verbose=True, scale=1):
-    np.random.seed(42)
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+         verbose=True, scale=1, device=None):
+    rng = np.random.default_rng(config['random_state'])
+    random.seed(config['random_state'])
+    if device is None:
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
     ### Initialize model and dataset
     _, test_dataset, _, _ = make_dataset(config, data_dir, return_loader=False)
     model = MODELS[config['model']['name']] # TODO move all such dicts to one place
@@ -49,7 +58,7 @@ def test(config: dict, weights: str, attack='deepfool',
     iters = np.zeros(L) * np.NaN
     pert_norms = np.zeros(L) * np.NaN
     changed = np.arange(L) * np.NaN
-    idx = np.random.choice(np.arange(L), number)
+    idx = rng.choice(np.arange(L), number, replace=False)
     
 
     for i in tqdm.tqdm(idx, disable=not verbose):
@@ -76,9 +85,11 @@ if __name__ == '__main__':
     with open(args.config) as f:
         config =  json.load(f)
 
-    iters, changed = test(config, args.weights, args.attack, args.strength, args.max_iter, data_dir=args.data)
+    iters, changed, pert_norms = test(config, args.weights, args.attack.lower(), args.strength, args.max_iter, data_dir=args.data)
     model_name = config['model']['name']
     unique, counts = np.unique(iters, return_counts=True)
+    print('mean robustness')
+    print(pert_norms.mean())
     print('distribution of number of iterations till inversion of label')
     print(unique)
     print(counts)

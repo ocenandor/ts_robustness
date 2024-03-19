@@ -15,16 +15,12 @@ from tqdm import tqdm
 sys.path.append('.')
 from src.metrics import create_table
 from src.utils import open_config
-from tools.attack import ATTACKS, test
+from tools.attack import ATTACK_PARMS, test
 from tools.train import train
 
 if __name__ == '__main__':
 
     os.system("bash data/downloadFordA.sh")  
-
-    ATTACK_PARMS = {'bim': (0.002, 200),
-                    'deepfool': (0.5, 50),
-                    'simba': (10, 1000)}
 
     configs = glob('configs/*500.json')
     results = {}
@@ -33,10 +29,10 @@ if __name__ == '__main__':
         model_name = config['model']['name'] #TODO Think about logging, to make it more user-friendly
         print('Train', model_name.upper())
         train(config=config, wandb_log=False, save_dir='demo/', dataset_dir='data/FordA', verbose=False)
-        for attack in tqdm(ATTACKS): 
+        for attack in ATTACK_PARMS: 
             results.setdefault(attack, {})   
             print('Attack with', attack)  
-            iters, _, pert_norms = test(config, f'demo/{model_name}.pt', attack, *ATTACK_PARMS[attack], verbose=False)      
+            iters, _, pert_norms = test(config, f'demo/{model_name}.pt', attack, *ATTACK_PARMS[attack], verbose=True)      
             results[attack][model_name] = {'iters': iters, 'pert_norms': pert_norms}
     
     print('\n                      ==========================')
