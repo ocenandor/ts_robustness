@@ -2,7 +2,6 @@ import argparse
 import json
 import sys
 
-import joblib
 import numpy as np
 import torch
 import tqdm
@@ -15,7 +14,6 @@ from src.attacks.simba import simba
 from src.datasets import make_dataset
 from src.models import (CNNClassification, LSTMClassification,
                         TransformerClassification)
-from src.utils import str2torch
 
 MODELS = {
     'cnn': CNNClassification,
@@ -30,7 +28,10 @@ ATTACKS = {
 }
 
 
-def test(config: dict, weights: str, attack='deepfool', parameter=0.02, max_iter=50, data_dir='data/FordA', verbose=True):
+def test(config: dict, weights: str, attack='deepfool',
+         parameter=0.02, max_iter=50, data_dir='data/FordA',
+         verbose=True, scale=1):
+    np.random.seed(42)
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     ### Initialize model and dataset
     _, test_dataset, _, _ = make_dataset(config, data_dir, return_loader=False)
@@ -43,13 +44,22 @@ def test(config: dict, weights: str, attack='deepfool', parameter=0.02, max_iter
     attack = ATTACKS[attack] 
 
     ### Test model
-    iters = []
-    # for i in tqdm.tqdm(range(len(test_dataset))):
-    for i in tqdm.tqdm(range(20), disable=not verbose):
-        test_sample = torch.from_numpy(test_dataset[i][0]).to(device) # TODO unsqueeze for adding "feature" dimension, but should change for more interpretibility
-        _, loop_i = attack(test_sample, model, parameter, max_iter=max_iter, device=device)
-        iters.append(loop_i)
-    return np.array(iters)
+    L = len(test_dataset)
+    number = int(scale * L)
+    iters = np.zeros(L) * np.NaN
+    pert_norms = np.zeros(L) * np.NaN
+    changed = np.arange(L) * np.NaN
+    idx = np.random.choice(np.arange(L), number)
+    
+
+    for i in tqdm.tqdm(idx, disable=not verbose):
+        test_sample = torch.from_numpy(test_dataset[i][0]).to(device)
+        _, loop_i, is_changed, pert_norm = attack(test_sample, model, parameter, max_iter=max_iter, device=device)
+        iters[i] = loop_i
+        changed[i] = is_changed
+        pert_norms[i] = pert_norm
+
+    return np.array(iters), changed, np.array(pert_norms) #TODO More explicit names
 
 if __name__ == '__main__':
 
@@ -66,9 +76,10 @@ if __name__ == '__main__':
     with open(args.config) as f:
         config =  json.load(f)
 
-    iters = test(config, args.weights, args.attack, args.strength, args.max_iter, data_dir=args.data)
+    iters, changed = test(config, args.weights, args.attack, args.strength, args.max_iter, data_dir=args.data)
     model_name = config['model']['name']
     unique, counts = np.unique(iters, return_counts=True)
     print('distribution of number of iterations till inversion of label')
     print(unique)
     print(counts)
+    print(f'model changed the decision for {changed}% of data')
