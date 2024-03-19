@@ -55,12 +55,6 @@ python tools/hypersearch.py
 
 models - directory with models' weights
 configs - directory with models' configuration files
-||||
-| -------------| ------------- |------------- |
-| [`data/downloadFordA.sh`](./data/downloadFordA.sh) |download FordA dataset from source to [`data`](./data)|
-| [`train.py`](./train.py)   | train model from [`src.models`](./src/models) with json config. Configurations for results in tables are in [`configs`](./configs) folder  |
-| [`deep_fool_test.py`](./deep_fool_test.py)  | attack model from [`src.models`](./src/models.py) with deepfool attack from [`src.attacks.deepfool.py`](./src/attacks/deepfool.py) and return distribution of iterations for inversion of labels  |
-| [`hyper_search`](hyper_search/transformer_search.py)  |  folder with scripts for hyper search for models |
 
 
 ## Results :bar_chart:
