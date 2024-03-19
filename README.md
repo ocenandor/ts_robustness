@@ -42,11 +42,11 @@ models/download_weights.sh - download our weights
 tools:
   - train.py - train model from config (positional argument - path to config)
 ```bash
-python tools/train.py --dir models/ --no-wandb --data data/FordA cnn_500.json
+python tools/train.py --dir models/ --no-wandb --data data/FordA configs/cnn_500.json
 ```
   - attack.py - base script to test model with attack (positional arguments - config, weights, type of attack)
 ```bash
-python tools/attack.py -s 0.5 --max_iter 50 --data data/FordA cnn_500.json demo/cnn.pt deepfool
+python tools/attack.py -s 0.5 --max_iter 50 --data data/FordA configs/cnn_500.json demo/cnn.pt deepfool
 ```
   - hypersearch.py - script for tuning models' hyperparameters with wandb sweeps. The support for CLI arguments woll be added in the future
 ```bash
