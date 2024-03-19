@@ -12,6 +12,7 @@ Specifically, we train 3 state-of-the-art neural networks (LSTM, CNN, Transforme
 1. Download repo:
 ```bash
 git clone https://github.com/ocenandor/ts_robustness.git
+cd ts_robustness
 ```
 
 2. Build docker image:
