@@ -13,11 +13,12 @@ Specifically, we train 3 state-of-the-art neural networks (LSTM, CNN, Transforme
 ```bash
 git clone https://github.com/ocenandor/ts_robustness.git
 ```
-
-2. Build docker image:
 ```bash
 cd ts_robustness
 ```
+
+2. Build docker image:
+
 ```bash
 docker build . -t ts_robustness
 ```
@@ -36,11 +37,21 @@ python main.py
 ## Usage :joystick: (TODO)
 
 data/downloadFordA.sh - download FordA dataset from source
+models/download_weights.sh - download our weights
 
 tools:
-  - train.py - script to train model
-  - attack.py - base script to test model with attack
-  - hypersearch.py - script for tuning models' hyperparameters with wandb sweeps
+  - train.py - train model from config (positional argument - path to config)
+```bash
+python tools/train.py --dir models/ --no-wandb --data data/FordA cnn_500.json
+```
+  - attack.py - base script to test model with attack (positional arguments - config, weights, type of attack)
+```bash
+python tools/attack.py -s 0.5 --max_iter 50 --data data/FordA cnn_500.json demo/cnn.pt deepfool
+```
+  - hypersearch.py - script for tuning models' hyperparameters with wandb sweeps. The support for CLI arguments woll be added in the future
+```bash
+python tools/hypersearch.py
+```
 
 models - directory with models' weights
 configs - directory with models' configuration files
