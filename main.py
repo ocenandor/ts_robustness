@@ -1,4 +1,5 @@
 import json
+import os
 import sys
 import warnings
 
@@ -12,12 +13,14 @@ from tabulate import tabulate
 from tqdm import tqdm
 
 sys.path.append('.')
-from metrics import create_table
+from src.metrics import create_table
 from src.utils import open_config
 from tools.attack import ATTACKS, test
 from tools.train import train
 
 if __name__ == '__main__':
+
+    os.system("bash data/downloadFordA.sh")  
 
     ATTACK_PARMS = {'bim': (0.002, 200),
                     'deepfool': (0.5, 50),
