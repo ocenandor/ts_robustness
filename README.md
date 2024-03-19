@@ -16,6 +16,9 @@ git clone https://github.com/ocenandor/ts_robustness.git
 
 2. Build docker image:
 ```bash
+cd ts_robustness
+```
+```bash
 docker build . -t ts_robustness
 ```
 
