@@ -1,0 +1,24 @@
+{
+  "model": {
+	"name": "lstm",
+    "lstm": {
+      "hidden_dim": 200,
+      "num_layers": 2
+    },
+    "fc": {
+      "fc_dim": 200,
+      "dropout": 0.5772179794765548
+    }
+  },
+  "train": {
+    "optimizer": "adam",
+    "lr": 0.0006370407481499353,
+    "n_epoch": 15
+  },
+  "data": {
+    "step": 50,
+    "batch_size": 128,
+    "seq_length": 150
+  },
+  "random_state": 42
+}

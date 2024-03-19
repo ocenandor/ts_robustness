@@ -1,0 +1,38 @@
+{
+    "name": "sweep_cnn_rand",
+    "method": "random",
+    "metric": {"goal": "maximize", "name": "test_accuracy"},
+    "parameters": {
+      "model": {
+        "parameters": {
+          "name": {"value": "cnn"},
+          "backbone": {
+            "parameters": {
+              "input_dim": {"value": 1},
+              "hidden_dim": {"value": 387}
+            }
+          }
+        }
+      },
+        "train": {
+          "parameters": {
+            "optimizer": {"value": "adam"},
+            "lr": {"value": 0.0005478412903817822},
+            "n_epoch": {"value": 30},
+            "scheduler_config": {
+              "parameters": {
+                "type": {"value": null}
+              }
+            }
+          }
+        },
+        "data": {
+          "parameters": {
+            "seq_length": {"value": 500},
+            "step": {"value": 50},
+            "batch_size": {"value": 64}
+          }
+        },
+        "random_state": {"min": 0, "max": 100000}
+    }
+}

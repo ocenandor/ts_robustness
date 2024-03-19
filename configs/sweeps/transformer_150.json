@@ -1,20 +1,28 @@
 {
-    "name": "sweep_lstm",
+    "name": "sweep_transformer_150",
     "method": "bayes",
     "metric": {"goal": "maximize", "name": "test_accuracy"},
     "parameters": {
         "model": {
           "parameters": {
-            "name": {"values": ["lstm"]},
-            "lstm": {
+            "name": {"values": ["transformer"]},
+            "embedding": {
               "parameters": {
-                "hidden_dim": {"values": [50, 100, 150, 200]},
-                "num_layers": {"values": [1, 2, 3, 4]}
+                "in_channels": {"values": [1]},
+                "out_channels": {"values": [16, 25, 64]}
               }
             },
+            "encoder": {
+              "parameters": {
+                "layer_norm_eps": {"min": 0.00001, "max": 0.01},
+                "dropout": {"min": 0.3, "max": 0.9},
+                "activation": {"values": ["gelu"]}
+              }
+            },
+            "num_layers": {"values": [1, 2]},
             "fc": {
               "parameters": {
-                "fc_dim": {"values": [25, 50, 100, 200]},
+                "inner_dim": {"values": [25, 50, 100]},
                 "dropout": {"min": 0.3, "max": 0.9}
               }
             }
@@ -24,7 +32,7 @@
           "parameters": {
             "optimizer": {"values": ["adam"]},
             "lr": {"min": 0.000001, "max": 0.001},
-            "n_epoch": {"values": [15]},
+            "n_epoch": {"values": [30]},
             "scheduler_config": {
               "parameters": {
                 "type": {"values": [null]}
@@ -34,7 +42,7 @@
         },
         "data": {
           "parameters": {
-            "seq_length": {"values": [500]},
+            "seq_length": {"values": [150]},
             "step": {"values": [50]},
             "batch_size": {"values": [32, 64, 128, 256]}
           }

@@ -1,28 +1,28 @@
 {
   "data": {
     "step": 50,
-    "batch_size": 256,
+    "batch_size": 32,
     "seq_length": 150
   },
   "model": {
     "name": "transformer",
     "fc": {
-      "dropout": 0.3629351856326178,
-      "inner_dim": 50
+      "dropout": 0.5834257267486305,
+      "inner_dim": 100
     },
     "encoder": {
-      "dropout": 0.505816000972691,
+      "dropout": 0.3140066251525653,
       "activation": "gelu",
-      "layer_norm_eps": 0.004468593133490127
+      "layer_norm_eps": 0.00742385988326984
     },
     "embedding": {
       "in_channels": 1,
-      "out_channels": 25
+      "out_channels": 16
     },
     "num_layers": 2
   },
   "train": {
-    "lr": 0.0006345611256400737,
+    "lr": 0.00016174971317019094,
     "n_epoch": 30,
     "optimizer": "adam",
     "scheduler_config": {

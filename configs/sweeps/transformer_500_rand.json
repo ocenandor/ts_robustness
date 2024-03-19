@@ -1,0 +1,52 @@
+{
+    "name": "sweep_transformer_rand",
+    "method": "random",
+    "metric": {"goal": "maximize", "name": "test_accuracy"},
+    "parameters": {
+        "model": {
+          "parameters": {
+            "name": {"values": ["transformer"]},
+            "embedding": {
+              "parameters": {
+                "in_channels": {"value": 1},
+                "out_channels": {"value": 25}
+              }
+            },
+            "encoder": {
+              "parameters": {
+                "layer_norm_eps": {"value": 0.00116697345847172},
+                "dropout": {"value": 0.3632889164708741},
+                "activation": {"value": "gelu"}
+              }
+            },
+            "num_layers": {"value": 2},
+            "fc": {
+              "parameters": {
+                "inner_dim": {"value": 100},
+                "dropout": {"value": 0.6072127786846744}
+              }
+            }
+          }
+        },
+        "train": {
+          "parameters": {
+            "optimizer": {"value": "adam"},
+            "lr": {"value": 0.00005270152692981299},
+            "n_epoch": {"value": 30},
+            "scheduler_config": {
+              "parameters": {
+                "type": {"value": null}
+              }
+            }
+          }
+        },
+        "data": {
+          "parameters": {
+            "seq_length": {"value": 500},
+            "step": {"value": 50},
+            "batch_size": {"value": 32}
+          }
+        },
+        "random_state": {"min": 0, "max": 100000}
+    }
+}

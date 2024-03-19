@@ -1,18 +1,18 @@
 {
   "data": {
     "step": 50,
-    "batch_size": 256,
-    "seq_length": 150
+    "batch_size": 64,
+    "seq_length": 500
   },
   "model": {
     "name": "cnn",
     "backbone": {
       "input_dim": 1,
-      "hidden_dim": 100
+      "hidden_dim": 387
     }
   },
   "train": {
-    "lr": 0.0006345611256400737,
+    "lr": 0.0005478412903817822,
     "n_epoch": 30,
     "optimizer": "adam",
     "scheduler_config": {

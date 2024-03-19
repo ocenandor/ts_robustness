@@ -1,0 +1,33 @@
+{
+  "data": {
+    "step": 50,
+    "batch_size": 32,
+    "seq_length": 500
+  },
+  "model": {
+    "name": "transformer",
+    "fc": {
+      "dropout": 0.6072127786846744,
+      "inner_dim": 100
+    },
+    "encoder": {
+      "dropout": 0.3632889164708741,
+      "activation": "gelu",
+      "layer_norm_eps": 0.00116697345847172
+    },
+    "embedding": {
+      "in_channels": 1,
+      "out_channels": 25
+    },
+    "num_layers": 2
+  },
+  "train": {
+    "lr": 0.00005270152692981299,
+    "n_epoch": 30,
+    "optimizer": "adam",
+    "scheduler_config": {
+      "type": null
+    }
+  },
+  "random_state": 42
+}

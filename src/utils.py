@@ -1,9 +1,11 @@
+import json
+
 import numpy as np
 import torch
 import torch.optim.lr_scheduler as lr_scheduler
-from torch.optim.lr_scheduler import LambdaLR
-from torch.optim import Adam, AdamW, SGD
 from torch.functional import F
+from torch.optim import SGD, Adam, AdamW
+from torch.optim.lr_scheduler import LambdaLR
 
 
 def split_batch(batch, n_splits=1):
@@ -94,3 +96,9 @@ def transform_config(config: dict):
     
     transformed_config = {"parameters": transform_section(config)}
     return transformed_config
+
+def open_config(file):
+    with open(file) as f:
+        config =  json.load(f)
+
+    return config

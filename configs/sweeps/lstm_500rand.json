@@ -1,0 +1,44 @@
+{
+    "name": "sweep_lstm_rand",
+    "method": "random",
+    "metric": {"goal": "maximize", "name": "test_accuracy"},
+    "parameters": {
+      "model": {
+        "parameters": {
+          "name": {"value": "lstm"},
+          "lstm": {
+            "parameters": {
+              "hidden_dim": {"value": 200},
+              "num_layers": {"value": 2}
+            }
+          },
+          "fc": {
+            "parameters": {
+              "fc_dim": {"value": 200},
+              "dropout": {"value": 0.4732002025178691}
+            }
+          }
+        }
+      },
+        "train": {
+          "parameters": {
+            "optimizer": {"value": "adam"},
+            "lr": {"value": 0.00024157779590547925},
+            "n_epoch": {"value": 15},
+            "scheduler_config": {
+              "parameters": {
+                "type": {"value": null}
+              }
+            }
+          }
+        },
+        "data": {
+          "parameters": {
+            "seq_length": {"value": 500},
+            "step": {"value": 50},
+            "batch_size": {"value": 128}
+          }
+        },
+        "random_state": {"min": 0, "max": 100000}
+    }
+}

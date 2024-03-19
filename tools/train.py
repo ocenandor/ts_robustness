@@ -10,6 +10,7 @@ from ignite.metrics import Accuracy, Loss
 from torch import nn
 
 import wandb
+
 sys.path.append('.')
 from src.datasets import make_dataset
 from src.models import (CNNClassification, LSTMClassification,
@@ -22,7 +23,7 @@ MODELS = {
     'lstm': LSTMClassification
     }
 
-def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None):
+def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None, verbose=True):
     
     if wandb_log:
         wandb.init(entity='ts-robustness', project='ml-course', config=config)
@@ -89,8 +90,9 @@ def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None):
     def log_training_results(trainer):
         train_evaluator.run(train_dataloader)
         metrics = train_evaluator.state.metrics
-        print("Training Results - Epoch: {}  Avg accuracy: {:.2f} Avg loss: {:.4f}"
-            .format(trainer.state.epoch, metrics['accuracy'], metrics['loss']))
+        if verbose:
+            print("Training Results - Epoch: {}  Avg accuracy: {:.2f} Avg loss: {:.4f}"
+                .format(trainer.state.epoch, metrics['accuracy'], metrics['loss']))
         if wandb_log:
             wandb.log({"train_accuracy": metrics['accuracy'],
                     "train_loss": metrics['loss']})
@@ -99,8 +101,9 @@ def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None):
     def log_test_results(trainer):
         test_evaluator.run(test_dataloader)
         metrics = test_evaluator.state.metrics
-        print("Test Results - Epoch: {}  Avg accuracy: {:.2f} Avg loss: {:.4f}"
-            .format(trainer.state.epoch, metrics['accuracy'], metrics['loss']))
+        if verbose:
+            print("Test Results - Epoch: {}  Avg accuracy: {:.2f} Avg loss: {:.4f}"
+                .format(trainer.state.epoch, metrics['accuracy'], metrics['loss']))
         if wandb_log:
             wandb.log({"test_accuracy": metrics['accuracy'],
                 "test_loss": metrics['loss']})

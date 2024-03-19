@@ -1,0 +1,38 @@
+{
+    "name": "sweep_cnn_150",
+    "method": "bayes",
+    "metric": {"goal": "maximize", "name": "test_accuracy"},
+    "parameters": {
+        "model": {
+          "parameters": {
+            "name": {"values": ["cnn"]},
+            "backbone": {
+              "parameters": {
+                "input_dim": {"value": 1},
+                "hidden_dim": {"min": 10, "max": 500}
+              }
+            }
+          }
+        },
+        "train": {
+          "parameters": {
+            "optimizer": {"values": ["adam"]},
+            "lr": {"min": 0.000001, "max": 0.01},
+            "n_epoch": {"values": [30]},
+            "scheduler_config": {
+              "parameters": {
+                "type": {"values": [null]}
+              }
+            }
+          }
+        },
+        "data": {
+          "parameters": {
+            "seq_length": {"values": [150]},
+            "step": {"values": [50]},
+            "batch_size": {"values": [32, 64, 128, 256]}
+          }
+        },
+        "random_state": {"values": [42]}
+    }
+  }
