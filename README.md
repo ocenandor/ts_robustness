@@ -40,7 +40,7 @@ data/downloadFordA.sh - download FordA dataset from source
 models/download_weights.sh - download our weights
 
 tools:
-  - train.py - train model from config (positional argument - path to config)
+  - train.py - train model from config (positional argument - path to config). For wandb logging change entity and project in file
 ```bash
 python tools/train.py --dir models/ --no-wandb --data data/FordA configs/cnn_500.json
 ```
@@ -48,7 +48,7 @@ python tools/train.py --dir models/ --no-wandb --data data/FordA configs/cnn_500
 ```bash
 python tools/attack.py -s 0.5 --max_iter 50 --data data/FordA configs/cnn_500.json demo/cnn.pt deepfool
 ```
-  - hypersearch.py - script for tuning models' hyperparameters with wandb sweeps. The support for CLI arguments woll be added in the future
+  - hypersearch.py - script for tuning models' hyperparameters with wandb sweeps (change entity and project in file). The support for CLI arguments woll be added in the future
 ```bash
 python tools/hypersearch.py
 ```
