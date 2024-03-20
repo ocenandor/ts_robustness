@@ -70,7 +70,7 @@ class CartesianSearchVectors(SearchVectors):
     def get_random_vector(self) -> torch.Tensor:
         if len(self.vector_dimensions) == 0:
             raise IndexError("No Vectors left")
-        dimension = self.vector_dimensions.pop(random.randrange(len(self.vector_dimensions)))
+        dimension = self.vector_dimensions.pop(np.random.choice(np.arange(len(self.vector_dimensions))))
         search_vector = torch.zeros((self.size.numel()))
         search_vector[dimension] = 1
         return search_vector.reshape(self.size)
