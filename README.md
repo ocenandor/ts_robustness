@@ -34,47 +34,67 @@ python main.py
 ```
 
 
-## Usage :joystick: (TODO)
+## Usage :joystick:
+ - models – directory with models' weights. To download our weights run:
+```bash
+bash models/download_weights.sh
+```
+ - configs – directory with models' configuration files. To download FordA dataset from source run:
 
-data/downloadFordA.sh - download FordA dataset from source
-models/download_weights.sh - download our weights
+```bash
+bash data/downloadFordA.sh
+```
 
 tools:
-  - train.py - train model from config (positional argument - path to config). For wandb logging change entity and project in file
+  - train.py – train model from config (positional argument - path to config). For wandb logging change entity and project in file
 ```bash
 python tools/train.py --dir models/ --no-wandb --data data/FordA configs/cnn_500.json
 ```
-  - attack.py - base script to test model with attack (positional arguments - config, weights, type of attack)
+  - attack.py – base script to test model with attack (positional arguments - config, weights, type of attack)
 ```bash
-python tools/attack.py -s 0.5 --max_iter 50 --data data/FordA configs/cnn_500.json demo/cnn.pt deepfool
+python tools/attack.py -s 0.5 --max_iter 50 --data data/FordA --scale 0.5 configs/cnn_500.json demo/cnn.pt deepfool
 ```
-  - hypersearch.py - script for tuning models' hyperparameters with wandb sweeps (change entity and project in file). The support for CLI arguments woll be added in the future
+  - hypersearch.py – script for tuning models' hyperparameters with wandb sweeps (change entity and project in file). The support for CLI arguments woll be added in the future
 ```bash
 python tools/hypersearch.py
 ```
 
-models - directory with models' weights
-configs - directory with models' configuration files
 
 
 ## Results :bar_chart:
 ### Test Accuracy, %
 | Model / Dataset | FordA (length=500)|
 | :-------------:| :-------------: |
-| CNN   | **86.80 CI 95% [85.94; 87.43]**  | 
-| LSTM  | **79.56 CI 95% [79.50; 79.61]**  |
-| Transformer  | **75.96 CI 95% [75.76; 76.15]** | 
+| CNN   | **86.80** CI 95% [85.94; 87.43]  | 
+| LSTM  | 79.56 CI 95% **[79.50; 79.61]**  |
+| Transformer  | 75.96 CI 95% [75.76; 76.15] | 
 
 ### Test Accuracy (Max), %
 | Model / Dataset | FordA (length=500)| FordA (length=150)|
 | :-------------:| :-------------: |:-------------:|
 | CNN   | **90.45**  |**89.48** |
-| LSTM  | **81.36**|**88.09**|
-| Transformer  | **77.80** | **89.11**|
+| LSTM  | 81.36|88.09|
+| Transformer  | 77.80 | 89.11|
 
-### Implementation
+### Attack implementation
 | Model / Attack | DeepFool | SimBA | IFGSM (BIM)|
 | :-------------:| :-------------: | :-------------: | :-------------: |
 | CNN   | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: |
 | LSTM  | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: |
 | Transformer  | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: |
+
+### Mean robustness
+
+FordA500
+| Model / Attack | DeepFool | SimBA | IFGSM (BIM)|
+| :-------------:| :-------------: | :-------------: | :-------------: |
+| CNN   |   |  |  |
+| LSTM  |   |  |  |
+| Transformer  |   |  | |
+
+FordA150
+| Model / Attack | DeepFool | SimBA | IFGSM (BIM)|
+| :-------------:| :-------------: | :-------------: | :-------------: |
+| CNN   |   |  |  |
+| LSTM  |   |  |  |
+| Transformer  |   |  | |
