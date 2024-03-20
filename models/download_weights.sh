@@ -1,1 +1,1 @@
-gdown --folder 1I7cz5ukQOnAhDZUP4ECfsfCnn9ffknTF -O demo
+gdown --folder 1I7cz5ukQOnAhDZUP4ECfsfCnn9ffknTF -O models
