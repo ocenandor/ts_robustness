@@ -26,7 +26,7 @@ MODELS = {
 def train(config=None, wandb_log=True, save_dir=None, dataset_dir=None, verbose=True):
     
     if wandb_log:
-        wandb.init(entity='ts-robustness', project='ml-course', config=config)
+        wandb.init(entity='<ENTITY>', project='<PROJECT>', config=config)
         config = wandb.config
     torch.manual_seed(config['random_state'])
     torch.backends.cudnn.deterministic = True

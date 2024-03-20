@@ -8,7 +8,7 @@ def calcul_mean_confidence_interval(iters, statistic=np.mean):
     return conf_interval.low, conf_interval.high
 
 def form_cell(m, low, high, *args, conf_level=95):
-    return f'{m:.1f} {conf_level}% CI [{low:.1f}, {high:.1f}]'
+    return f'{m:.3f} {conf_level}% CI [{low:.3f}, {high:.3f}]'
 
 def create_table(results, key='pert_norms', func=np.mean):
     table = pd.DataFrame(index=results.keys()) #methods

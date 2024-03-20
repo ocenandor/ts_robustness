@@ -12,5 +12,5 @@ if __name__ == '__main__': #TODO need test
     with open('configs/sweeps/sweep3_cnn copy.json') as f: #TODO make arg parser
         config = json.load(f)
     # Init wandb sweep
-    sweep_id = wandb.sweep(entity='ts-robustness', sweep=config, project="ml-course")
+    sweep_id = wandb.sweep(entity='<ENTITY>', sweep=config, project="<PROJECT>")
     wandb.agent(sweep_id, partial(train, dataset_dir='data/FordA'), count=300)
