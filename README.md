@@ -28,7 +28,7 @@ docker build . -t ts_robustness
 docker run  --gpus device=0 -it --rm ts_robustness
 ```
 
-4. Run main.py to download data, train models and get some statistics of the models' robustness in report
+4. Run main.py to download data, train models and get some statistics of the models' robustness in report (~40 min on L40 GPU)
 ```bash
 python main.py
 ```
@@ -54,7 +54,7 @@ python tools/train.py --dir models/ --no-wandb --data data/FordA configs/cnn_500
 ```bash
 python tools/attack.py -s 0.5 --max_iter 50 --data data/FordA --scale 0.5 configs/cnn_500.json demo/cnn.pt deepfool
 ```
-  - hypersearch.py – script for tuning models' hyperparameters with wandb sweeps (change entity and project in file). The support for CLI arguments woll be added in the future
+  - hypersearch.py – script for tuning models' hyperparameters with wandb sweeps (change entity and project in file). The support for CLI arguments will be added in the future
 ```bash
 python tools/hypersearch.py
 ```
@@ -86,15 +86,19 @@ python tools/hypersearch.py
 ### Mean robustness
 
 FordA500
-| Model / Attack | DeepFool | SimBA | IFGSM (BIM)|
+| Attack / Model | CNN | LSTM | Transformer|
 | :-------------:| :-------------: | :-------------: | :-------------: |
-| CNN   |   |  |  |
-| LSTM  |   |  |  |
-| Transformer  |   |  | |
+|  IFGSM (BIM)   |   0.083|**0.105**| 0.076|
+|  DeepFool |  0.059| **0.179** |0.047|
+|  SimBA |**1.066**| 1.037 | 1.011|
 
 FordA150
-| Model / Attack | DeepFool | SimBA | IFGSM (BIM)|
+| Attack / Model | CNN | LSTM | Transformer|
 | :-------------:| :-------------: | :-------------: | :-------------: |
-| CNN   |   |  |  |
-| LSTM  |   |  |  |
-| Transformer  |   |  | |
+| IFGSM (BIM)    |0.119| **0.156** | 0.045 |
+| DeepFool  |  0.096 |**2.599e8** |0.030 |
+| SimBA  |   1.047 |**1.110** | 1.048|
+
+
+
+
