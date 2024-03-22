@@ -54,7 +54,7 @@ python tools/train.py --dir models/ --no-wandb --data data/FordA configs/cnn_500
 ```bash
 python tools/attack.py -s 0.5 --max_iter 50 --data data/FordA --scale 0.5 configs/cnn_500.json demo/cnn.pt deepfool
 ```
-  - hypersearch.py – script for tuning models' hyperparameters with wandb sweeps (change entity and project in file). The support for CLI arguments woll be added in the future
+  - hypersearch.py – script for tuning models' hyperparameters with wandb sweeps (change entity and project in file). The support for CLI arguments will be added in the future
 ```bash
 python tools/hypersearch.py
 ```
