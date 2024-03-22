@@ -86,13 +86,11 @@ if __name__ == '__main__':
 
     with open(args.config) as f:
         config =  json.load(f)
-
+    
     iters, changed, pert_norms = test(config, args.weights, args.attack.lower(), args.strength, args.max_iter, data_dir=args.data, scale=args.scale)
     model_name = config['model']['name']
     unique, counts = np.unique(iters, return_counts=True)
     print('mean robustness')
-    print(pert_norms.mean())
-    print('distribution of number of iterations till inversion of label')
-    print(unique)
-    print(counts)
-    print(f'model changed the decision for {changed}% of data')
+    print(f'{np.nanmean(pert_norms):.4f}')
+    changed = changed[~np.isnan(changed)]
+    print(f'model changed the decision for {changed.mean() * 100 :.1f}% of data')
