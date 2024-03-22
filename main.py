@@ -19,7 +19,7 @@ from tools.attack import ATTACK_PARMS, test
 from tools.train import train
 
 if __name__ == '__main__':
-
+    print('Downloading data ...')
     os.system("bash data/downloadFordA.sh")  
 
     configs = glob('configs/*500.json')
@@ -43,4 +43,4 @@ if __name__ == '__main__':
     print(tabulate(table, headers='keys', tablefmt='psql'))
     table.to_csv('demo/results.csv')      
     print('results saved in results.csv')      
-    joblib.dump(results, 'demo/500_results.pkl')
+    joblib.dump(results, 'demo/results.pkl')

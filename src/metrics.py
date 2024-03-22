@@ -15,6 +15,7 @@ def create_table(results, key='pert_norms', func=np.mean):
     for method in results:
         for model in results[method]: #models
             arr = results[method][model][key] #array
+            arr = arr[~np.isnan(arr)]
             metric = func(arr)
             low, high = calcul_mean_confidence_interval(arr, func)
             cell = form_cell(metric, low, high)
